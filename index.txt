@@ -1,0 +1,2263 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BrainZone">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#e8f4ff">
+<meta name="description" content="Joacă gratis integrame online în română, cu indicii-poză, sudoku și Vânătoarea de cuvinte. Niveluri din ce în ce mai grele, integrama zilei, teme și recompense. Fără cont, direct în telefon.">
+<title>BrainZone – Integrame online gratis, Sudoku și Vânătoarea de cuvinte</title>
+<link rel="canonical" href="https://monica19942026.github.io/Integrame/">
+<meta name="keywords" content="integrame online, integrame gratis, integrame cu poze, sudoku online, rebus, joc de cuvinte, vânătoarea de cuvinte, BrainZone">
+<meta property="og:type" content="website"><meta property="og:title" content="BrainZone – Integrame online gratis, Sudoku și Vânătoarea de cuvinte"><meta property="og:description" content="Joacă gratis integrame online în română, cu indicii-poză, sudoku și Vânătoarea de cuvinte. Niveluri din ce în ce mai grele, integrama zilei, teme și recompense. Fără cont, direct în telefon."><meta property="og:url" content="https://monica19942026.github.io/Integrame/"><meta property="og:locale" content="ro_RO">
+<meta property="og:image" content="https://monica19942026.github.io/Integrame/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="BrainZone">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://monica19942026.github.io/Integrame/og-image.png">
+<style>
+:root{--bg:#e8f4ff;--card:#fff;--ink:#1d2b4a;--mut:#62708f;--acc:#ff5d73;--onacc:#fff;--sel:#ffd23f;--hl:#cdeeff;--line:#c5d8ee;--bad:#ffc4cc;--key:#d6e8fa;--kp:linear-gradient(160deg,#ffd9a0,#ffb8d2);--k:#fffaf2;--ks:#e0a989;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a30;--card:#1b2846;--ink:#eef3ff;--mut:#9aa9cc;--acc:#ff8a9a;--onacc:#101a30;--sel:#a67c00;--hl:#244a73;--line:#334469;--bad:#7a2e3a;--key:#2a3a60;--kp:linear-gradient(160deg,#3d3166,#24506b);--k:#5a5486;--ks:#2a2548;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101a30;--card:#1b2846;--ink:#eef3ff;--mut:#9aa9cc;--acc:#ff8a9a;--onacc:#101a30;--sel:#a67c00;--hl:#244a73;--line:#334469;--bad:#7a2e3a;--key:#2a3a60;--kp:linear-gradient(160deg,#3d3166,#24506b);--k:#5a5486;--ks:#2a2548;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 ui-rounded,"SF Pro Rounded",system-ui,-apple-system,"Segoe UI",sans-serif;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+main{max-width:480px;margin:0 auto;padding:10px 14px 24px}
+button{font:inherit;color:inherit}
+.hero{text-align:center;padding:14px 0 6px}
+.hero .big{font-size:60px;line-height:1}
+.hero h1{font-size:32px;margin:6px 0 4px}
+.tot{margin:10px 10px 4px}
+.tot p{margin:6px 0 0;color:var(--mut);font-weight:700}
+.bar{display:block;height:9px;border-radius:6px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc);border-radius:6px}
+.card{display:flex;align-items:center;gap:14px;width:100%;margin-top:12px;padding:16px;border:0;border-radius:22px;color:#fff;text-align:left;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.card:active,.tile:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.card .ic{font-size:42px;line-height:1}
+.card .tx{flex:1}
+.card b{display:block;font-size:22px}
+.card small{display:block;opacity:.92;font-size:14px}
+.card .bar{background:rgba(255,255,255,.35);margin-top:8px}
+.card .bar i{background:#fff}
+.card .pg{font-weight:800}
+.c-usor{background:#17a673}.c-mediu{background:#2f7df6}.c-greu{background:#9a4de0}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.top b{flex:1;font-size:19px}
+.top button{border:0;border-radius:12px;background:var(--key);padding:9px 13px;font-weight:700}
+#tl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.tile{border:0;border-radius:18px;color:#fff;font-size:26px;font-weight:800;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.tile small{font-size:14px;min-height:16px}
+#game{display:flex;flex-direction:column;height:calc(100vh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 10px);height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 10px)}
+.clue{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:6px 12px;display:flex;gap:12px;align-items:center;min-height:64px}
+.pic{font-size:40px;line-height:1;transition:filter .2s}
+.pic.bl{filter:blur(12px);cursor:pointer}
+.clue small{color:var(--mut);display:block;font-size:13px}
+.clue b{font-size:17px}
+#gw{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+#g{display:grid;grid-template-columns:repeat(var(--n),var(--s));grid-auto-rows:var(--s);gap:3px}
+#g b{position:relative;display:flex;align-items:center;justify-content:center;background:var(--card);border:2px solid var(--line);border-radius:8px;font-size:calc(var(--s)*.58);font-weight:800}
+#g b.hl{background:var(--hl)}
+#g b.sel{background:var(--sel);border-color:var(--acc)}
+#g b.bad{background:var(--bad)}
+#g b.giv{color:var(--acc)}
+#g b small{position:absolute;top:0;left:2px;font-size:8px;font-weight:700;color:var(--mut)}
+.kp{margin:0 -14px;padding:8px 8px 10px;border-radius:24px 24px 0 0;background:var(--kp)}
+#m{min-height:20px;text-align:center;font-weight:700;font-size:14px;color:#3a2a4a}
+.row{display:flex;gap:6px;margin-bottom:8px}
+.row button{flex:1;padding:8px 0;border:0;border-radius:12px;background:rgba(255,255,255,.55);color:#3a2a4a;font-size:14px;font-weight:700}
+.kb{display:flex;flex-direction:column;gap:6px}
+.kb div{display:flex;gap:4px;justify-content:center}
+.kb button{flex:1;max-width:40px;height:44px;border:0;border-radius:10px;background:var(--k);box-shadow:0 2px 0 var(--ks);font-size:18px;font-weight:800}
+.kb button:active{background:var(--sel)}
+.kb .w{max-width:58px;background:var(--acc);color:var(--onacc)}
+.ov{position:fixed;inset:0;background:rgba(10,20,40,.6);display:flex;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px));z-index:5}
+.ov>div{background:var(--card);border-radius:28px;padding:24px 20px;text-align:center;width:100%;max-width:340px;max-height:100%;overflow:auto}
+.ov .big{font-size:60px;line-height:1}
+.ov h1{font-size:28px;margin:8px 0 4px}
+.ov p{margin:0 0 8px;color:var(--mut)}
+.ov ol{list-style:none;padding:0;margin:10px 0;display:grid;gap:6px;text-align:left}
+.ov li{display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:14px;padding:8px 12px;font-size:15px}
+.ov li.done{opacity:.5;text-decoration:line-through}
+.ov li span{font-size:26px}
+.hero{position:relative}
+.hero h1{font-size:28px}
+.hero p{margin:0;color:var(--mut);font-weight:600}
+.hero .coin{position:absolute;right:0;top:4px}
+.coin{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:5px 10px;font-weight:800;white-space:nowrap;font-size:15px}
+.w0{background:#17a673}.w1{background:#2f7df6}.w2{background:#9a4de0}.w3{background:#d9730d}.w4{background:#e0457b}
+.card.lk{opacity:.55;filter:grayscale(.7)}
+.tile.lk{background:var(--line);color:var(--mut);box-shadow:none}
+.wm{text-align:center;color:var(--mut);font-weight:700;min-height:22px}
+.top b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row button{font-size:13px}
+main{padding-bottom:0}
+section:not(#game):not(#rt):not(#sdg):not(#ws){padding-bottom:90px}
+input{-webkit-user-select:text;user-select:text;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:10px;flex:1;min-width:0;text-transform:uppercase}
+.top b{min-width:0}
+.w5{background:#0f9bb0}
+.hero2{background:linear-gradient(135deg,#e0457b,#d9730d)}
+#nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:2px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:4}
+#nav button{flex:1;border:0;background:none;padding:8px 0 6px;font-size:22px;line-height:1.1}
+#nav small{display:block;font-size:11px;font-weight:700;color:var(--mut)}
+#nav .on small{color:var(--acc)}
+#ts{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:16px;font-weight:700;white-space:pre-line;text-align:center;z-index:9;max-width:90vw}
+#lbt{display:flex;gap:6px}
+#lbt button{flex:1;padding:9px;border:2px solid var(--line);border-radius:12px;background:var(--card);font-weight:700}
+#lbt .on{background:var(--acc);color:var(--onacc);border-color:var(--acc)}
+#lbl{list-style:none;padding:0;margin:10px 0;display:grid;gap:6px}
+#lbl li{display:flex;gap:12px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:10px 12px}
+#lbl li.me{border-color:var(--acc)}
+#lbl li b{min-width:28px}
+#lbl li span{flex:1}
+#lbl em{font-style:normal;font-weight:800}
+.du{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:12px;margin-top:12px}
+.du .row{margin:8px 0 0}
+.du .row button{background:var(--acc);color:var(--onacc)}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stats div{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:10px 12px;display:grid}
+.stats span{font-size:22px}
+.stats b{font-size:22px}
+.stats small{color:var(--mut);font-weight:700}
+#pf h2{font-size:18px;margin:16px 0 8px}
+.bd{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bd div{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:10px 4px;text-align:center}
+.bd span{font-size:32px}
+.bd small{display:block;font-size:11px;font-weight:700}
+.bd .off{filter:grayscale(1);opacity:.35}
+#rw{position:relative;width:min(88vw,340px);aspect-ratio:1;margin:14px auto}
+#rw::before{content:"";position:absolute;inset:12%;border:3px dashed var(--line);border-radius:50%}
+#rw>button{position:absolute;width:54px;height:54px;border-radius:50%;border:0;background:var(--k);box-shadow:0 3px 0 var(--ks);font-size:24px;font-weight:800;transform:translate(-50%,-50%)}
+#rw>button:disabled{opacity:.25}
+#rs{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;letter-spacing:3px;color:var(--acc);pointer-events:none}
+#rw.sh{animation:shk .4s}
+@keyframes shk{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.wb{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:16px;color:#fff;margin:16px 0 6px;font-size:17px}
+.wb span{font-size:26px}
+.wb.lk{filter:grayscale(.7);opacity:.6}
+.mp{position:relative;padding:6px 0}
+.mp::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:4px dotted var(--line)}
+.nd{position:relative;display:block;width:58px;height:58px;border-radius:50%;border:0;color:#fff;font-size:22px;font-weight:800;margin-bottom:14px;transform:translateX(-50%);box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.nd.lk{background:var(--line);color:var(--mut);box-shadow:none}
+.nd.cu{animation:pl 1.4s ease-in-out infinite}
+@keyframes pl{50%{transform:translateX(-50%) scale(1.12)}}
+#thl h2{font-size:17px;margin:18px 0 0}
+.lr{display:flex;gap:6px;margin:10px 0}
+.lr i{flex:1;font-style:normal;text-align:center;padding:8px 0;border-radius:10px;background:var(--bg);border:2px solid var(--line);font-weight:800;font-size:13px}
+.lr i.ok{background:var(--acc);color:var(--onacc);border-color:var(--acc)}
+#whc{position:relative;width:min(80vw,300px);aspect-ratio:1;margin:34px auto 18px}
+#whc::before{content:"▼";position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-size:28px;color:var(--acc);z-index:2}
+#wh{position:absolute;inset:0;border-radius:50%;border:6px solid var(--card);box-shadow:0 0 0 3px var(--line);transition:transform 4s cubic-bezier(.15,.7,.1,1)}
+#wh span{position:absolute;left:50%;top:50%;font-weight:800;color:#fff;font-size:15px;white-space:nowrap}
+#sp{background:var(--acc);color:var(--onacc)}
+.pr{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.pr>div{flex:1}
+.pr b{font-size:20px;display:block}
+.pr small{color:var(--mut);font-weight:700;display:block}
+.av{font-size:44px;width:76px;height:76px;border-radius:50%;border:3px solid var(--acc);background:var(--card)}
+.avs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:10px 0}
+.avs button{font-size:28px;border:2px solid var(--line);border-radius:14px;background:var(--bg);padding:6px}
+.avs .on{border-color:var(--acc);background:var(--hl)}
+.cf{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:8}
+.cf i{position:absolute;top:-14px;width:9px;height:14px;border-radius:2px;animation:fl 2.2s ease-in forwards}
+@keyframes fl{to{transform:translate(var(--dx),105vh) rotate(720deg)}}
+.ov .big{animation:bn .8s}
+@keyframes bn{0%{transform:scale(.3)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.ov .big,.nd.cu{animation:none}#wh{transition-duration:.01s}}
+#thl details{margin-top:12px}
+#thl summary{font-weight:800;font-size:17px;padding:12px 14px;background:var(--card);border:2px solid var(--line);border-radius:16px;list-style:none;cursor:pointer}
+#thl summary::-webkit-details-marker{display:none}
+#thl details[open] summary{border-color:var(--acc)}
+#g{position:relative}
+#gw.big{align-items:flex-start;justify-content:flex-start;overflow:auto;-webkit-overflow-scrolling:touch}
+#gw.big #g{margin:auto}
+#nav button{font-size:20px}
+#nav small{font-size:10px}
+#sdg{display:flex;flex-direction:column;height:calc(100vh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 10px);height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 10px)}
+#sbw{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+#sb{--z:min(40px,calc((100vw - 34px)/9));display:grid;grid-template-columns:repeat(9,var(--z));grid-auto-rows:var(--z);border:3px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--card)}
+#sb b{position:relative;display:flex;align-items:center;justify-content:center;font-size:calc(var(--z)*.6);font-weight:700;border:1px solid var(--line);color:#2f6fe0}
+#sb b.gv{color:var(--ink);font-weight:800}
+#sb b.rb{border-right:2.5px solid var(--ink)}
+#sb b.bb{border-bottom:2.5px solid var(--ink)}
+#sb b.hl{background:var(--hl)}
+#sb b.sm{background:var(--sel);opacity:.85}
+#sb b.sel{background:var(--sel)}
+#sb b.er{background:var(--bad);color:#b3212f}
+#sb i.nt{display:grid;grid-template-columns:repeat(3,1fr);width:100%;height:100%;font-style:normal;font-size:calc(var(--z)*.26);color:var(--mut);font-weight:600}
+#sb i.nt s{text-decoration:none;display:flex;align-items:center;justify-content:center}
+#sm{min-height:20px;text-align:center;font-weight:700;font-size:14px;color:#3a2a4a}
+#snt.on{background:var(--acc);color:var(--onacc)}
+#spd{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+#spd button{height:46px;border:0;border-radius:10px;background:var(--k);box-shadow:0 2px 0 var(--ks);font-size:20px;font-weight:800}
+#spd button:active{background:var(--sel)}
+#spd button.dn{opacity:.3;pointer-events:none}
+#sdt h2{font-size:18px;margin:18px 0 8px}
+.tg{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tg .tile{font-size:22px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #sb b{color:#8fb0ff}:root:not([data-theme="light"]) #sb b.gv{color:var(--ink)}:root:not([data-theme="light"]) #sb b.er{color:#ffb3bb}:root:not([data-theme="light"]) #sm{color:#eef3ff}}
+#g i.mk{background:var(--hl);border-radius:6px;opacity:.5}
+
+#ws{display:flex;flex-direction:column;height:calc(100vh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 10px);height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 10px)}
+#ws[hidden]{display:none}
+#wsw{flex:1;min-height:0;overflow:auto;display:flex;-webkit-overflow-scrolling:touch;border-radius:10px;background:#fffbea;border:3px solid #1b2340}
+#wg{display:grid;grid-template-columns:repeat(12,var(--z));grid-auto-rows:var(--z);--z:min(46px,calc((100vw - 28px)/12));width:max-content;margin:auto}
+#wg b{display:flex;align-items:center;justify-content:center;font-size:calc(var(--z)*.62);font-weight:800;color:#1b2340;border-radius:8px;user-select:none;-webkit-user-select:none}
+#wg b.sel{background:var(--sel);outline:2px solid var(--ink)}
+#wg b.ht{background:#ffe08a}
+#ws .kp{margin-top:8px}
+#wm{color:#1b2340;text-align:center;font-weight:700;font-size:14px;min-height:20px}
+#wc{display:flex;flex-wrap:wrap;gap:5px;max-height:30vh;overflow:auto;margin:6px 0}
+#wc i{font-style:normal;font-size:16px;font-weight:600;color:#1b2340;background:#fff;border-radius:10px;padding:4px 8px}
+#wc i small{color:#5b6580}
+#wc i.ok{background:#bff0cf;color:#14532d}
+</style></head><body>
+<noscript><h1>BrainZone – integrame online gratis</h1><p>Joacă integrame cu indicii-poză, sudoku și Vânătoarea de cuvinte, în română. Activează JavaScript ca să joci.</p></noscript>
+
+<main>
+<section id="today" hidden><div class="hero"><span class="coin" id="c1"></span><div class="big">🧩</div><h1>BrainZone</h1><p id="dt"></p></div><div id="td"></div></section>
+<section id="home" hidden><div class="top"><b>🗺️ Harta aventurii</b><span class="coin" id="c5"></span></div><div class="tot"><span class="bar"><i id="tb"></i></span><p id="tp"></p></div><div id="lv" hidden></div><div id="mapc"></div></section>
+<section id="lvl" hidden><div class="top"><button id="lb2">‹ Înapoi</button><b id="lt"></b><span class="coin" id="c2"></span></div><div id="tl"></div><p id="wm" class="wm"></p></section>
+<section id="game" hidden>
+<div class="top"><button id="bk">‹</button><b id="tt"></b><span class="coin" id="tm"></span><span class="coin" id="c3"></span><button id="li">📋</button></div>
+<div class="clue" id="cl"></div>
+<div id="gw"><div id="g"></div></div>
+<div class="kp"><div id="m"></div>
+<div class="row"><button id="ck">✔️ Verifică</button><button id="hn">💡 Literă 5🪙</button><button id="wb">✨ Cuvânt 15🪙</button></div>
+<div class="kb" id="kb"></div></div>
+</section>
+<section id="lb" hidden><div class="top"><b>🏆 Clasament</b><span class="coin" id="c6"></span></div><div id="lbt"></div><ol id="lbl"></ol>
+<div class="du"><b>⚔️ Duel cu prietenii</b><p class="wm">Aceeași integramă pentru amândoi. Câștigă cel mai bun scor.</p>
+<div class="row"><button id="dn">Creează duel</button></div>
+<div class="row"><input id="dc" maxlength="5" placeholder="Cod duel" autocapitalize="characters"><button id="dj">Intră</button></div><div id="dh" class="row"></div></div></section>
+<section id="prof" hidden><div class="top"><b>👤 Profil și statistici</b><span class="coin" id="c7"></span></div><div id="pf"></div></section>
+<section id="rt" hidden><div class="top"><button id="rb">‹</button><b>⭕ Cercul literelor</b><span class="coin" id="c4"></span></div><div class="clue" id="rc"></div><div id="rw"></div></section>
+<section id="th" hidden><div class="top"><b>📚 Teme</b><span class="coin" id="c9"></span></div><div id="thl"></div></section>
+<section id="wl" hidden><div class="top"><button id="wb2">‹</button><b>🎡 Roata norocului</b><span class="coin" id="c8"></span></div><div id="whc"><div id="wh"></div></div><p class="wm" id="wr"></p><div class="row"><button id="sp">Rotește</button></div></section>
+<section id="sd" hidden><div class="top"><b>🔢 Sudoku</b><span class="coin" id="c10"></span></div><div id="sdl"></div><div id="sdt"></div></section>
+<section id="ws" hidden><div class="top"><button id="wbk">‹</button><b id="wtt"></b><span class="coin" id="wtm"></span><span class="coin" id="c12"></span></div><div id="wsw"><div id="wg"></div></div><div class="kp"><div id="wm"></div><div id="wc"></div><div class="row"><button id="whn">💡 Indiciu</button></div></div></section>
+<section id="sdg" hidden><div class="top"><button id="sbk">‹</button><b id="stt"></b><span class="coin" id="stm"></span><span class="coin" id="c11"></span></div><div id="sbw"><div id="sb"></div></div><div class="kp"><div id="sm"></div><div class="row"><button id="snt">✏️ Notițe: nu</button><button id="shn">💡 Număr 5🪙</button><button id="srs">🔄 Reîncepe</button></div><div id="spd"></div></div></section>
+<nav id="nav"><button data-t="today">📅<small>Azi</small></button><button data-t="home">🗺️<small>Harta</small></button><button data-t="th">📚<small>Teme</small></button><button data-t="sd">🔢<small>Sudoku</small></button><button data-t="lb">🏆<small>Clasament</small></button><button data-t="prof">👤<small>Profil</small></button></nav>
+<div id="ts" hidden></div>
+</main>
+<div class="ov" id="ov" hidden></div>
+<script>
+//GEN
+const POOL=`CAINE|🐶|Prietenul omului
+PISICA|🐱|Toarce și prinde șoareci
+CAL|🐴|Se călărește
+VACA|🐄|Dă lapte
+OAIE|🐑|Dă lână
+RATA|🦆|Înoată în baltă
+PESTE|🐟|Trăiește în apă
+URS|🐻|Doarme iarna
+LEU|🦁|Regele junglei
+TIGRU|🐯|Pisică mare cu dungi
+MAIMUTA|🐒|Iubește bananele
+BROASCA|🐸|Face oac
+ALBINA|🐝|Face miere
+ELEFANT|🐘|Are trompă
+RAC|🦀|Merge înapoi
+IEPURE|🐰|Are urechi lungi
+GAINA|🐔|Face ouă
+BUFNITA|🦉|Zboară noaptea
+PINGUIN|🐧|Trăiește pe gheață
+BALENA|🐳|Cel mai mare mamifer
+FLUTURE|🦋|Are aripi colorate
+MAR|🍎|Fruct crocant
+BANANA|🍌|Fruct galben
+LAMAIE|🍋|Fruct acru
+STRUGURE|🍇|Din el se face vinul
+PEPENE|🍉|Verde afară, roșu înăuntru
+CIREASA|🍒|Mică și roșie, cu sâmbure
+CAPSUNA|🍓|Roșie, cu semințe pe afară
+MORCOV|🥕|Portocaliu, îl iubesc iepurii
+PAINE|🍞|Se coace în cuptor
+BRANZA|🧀|Se face din lapte
+CEAI|🍵|Se bea cald
+LAPTE|🥛|Alb, de la vacă
+TORT|🎂|Se mănâncă la aniversare
+ROSIE|🍅|Legumă roșie
+CARTOF|🥔|Se face piure
+PORUMB|🌽|Pentru floricele
+MIERE|🍯|Dulce, de la albine
+SARE|🧂|Se pune în mâncare
+SOARE|☀️|Strălucește ziua
+LUNA|🌙|Luminează noaptea
+STEA|⭐|Sclipește pe cer
+PLOAIE|🌧️|Cade din nori
+FOC|🔥|Arde și încălzește
+APA|💧|Se bea
+COPAC|🌳|Are frunze și trunchi
+FLOARE|🌸|Crește în grădină
+MUNTE|⛰️|Foarte înalt
+OCEAN|🌊|Mai mare decât marea
+CURCUBEU|🌈|Apare după ploaie
+CASA|🏠|Locuim în ea
+CARTE|📖|Se citește
+CHEIE|🔑|Deschide ușa
+CEAS|⏰|Arată ora
+MINGE|⚽|Se lovește cu piciorul
+CHITARA|🎸|Are corzi
+PIAN|🎹|Are clape
+UMBRELA|☂️|Te ferește de ploaie
+OCHELARI|👓|Ajută la vedere
+BALON|🎈|Zboară cu heliu
+CADOU|🎁|Se primește la sărbători
+ROBOT|🤖|Mașină care imită omul
+AVION|✈️|Zboară pe cer
+TREN|🚆|Merge pe șine
+MASINA|🚗|Are patru roți
+BARCA|⛵|Plutește pe apă
+BICICLETA|🚲|Are două roți
+ELICOPTER|🚁|Zboară pe loc
+RACHETA|🚀|Pleacă în spațiu
+CASTEL|🏰|Locuința regilor
+OCHI|👁️|Cu ei vedem
+URECHE|👂|Cu ea auzim
+INIMA|❤️|Bate în piept`.split('\n').map(s=>s.split('|'));
+const FUN=`COVRIG|🥨|Pâine răsucită, cu sare
+GOGOASA|🍩|Rotundă, cu gaură și glazură
+CIUPERCA|🍄|Crește după ploaie, în pădure
+CASTRAVETE|🥒|Verde și crocant, stă în salată
+UNICORN|🦄|Cal cu un corn magic
+DINOZAUR|🦖|A dispărut acum milioane de ani
+FANTOMA|👻|Face buu! noaptea
+VAMPIR|🧛|Fuge de soare
+OZN|🛸|Farfurie zburătoare
+PAPAGAL|🦜|Repetă tot ce aude
+TESTOASA|🐢|Lentă, cu carapace
+LENES|🦥|Doarme tot timpul, agățat de ramură
+CIORAP|🧦|Se pierde mereu din pereche
+PALARIE|🎩|Magicianul scoate iepuri din ea
+CADA|🛁|Te scufunzi în ea printre bule
+DINTE|🦷|Îl speli de două ori pe zi
+MATURA|🧹|Cu ea zboară vrăjitoarele
+VRAJITOR|🧙|Face farmece cu bagheta
+SIRENA|🧜|Jumătate om, jumătate pește
+CIRC|🎪|Are clovni și acrobați
+CLOVN|🤡|Nas roșu și pantofi mari
+MASCA|🎭|O pui ca să nu te recunoască
+ZMEU|🪁|Zboară legat de o sfoară
+URSULET|🧸|Prietenul de pluș
+ACADEA|🍭|Dulce, pe băț
+INGHETATA|🍦|Se topește la soare
+CIOCOLATA|🍫|Face lumea fericită
+CLATITE|🥞|Se răsucesc în tigaie
+CEAPA|🧅|Te face să plângi
+FLAMINGO|🦩|Stă într-un picior, e roz
+GIRAFA|🦒|Are gâtul foarte lung
+ZEBRA|🦓|Cal în pijama cu dungi
+CANGUR|🦘|Sare cu puiul în buzunar
+ARICI|🦔|Are ghimpi în loc de blană
+LILIAC|🦇|Doarme cu capul în jos
+SARPE|🐍|Șuieră și nu are picioare
+RECHIN|🦈|Peștele cu mulți dinți
+CROCODIL|🐊|Plânge cu lacrimi false
+DRAGON|🐲|Suflă foc pe nări
+DOVLEAC|🎃|Are față de Halloween
+COCOS|🐓|Cântă dimineața devreme
+PIZZA|🍕|Triunghi cald cu brânză
+POPCORN|🍿|Pocnește în tigaie și la cinema
+TELEFON|📱|Sună și are ecran
+PLAPUMA|🛏️|Te acoperi cu ea iarna
+BURGER|🍔|Sandviș rotund cu chiftea
+HOTDOG|🌭|Crenvurști în chiflă
+MICROFON|🎤|Cânți în el la karaoke
+CALCULATOR|💻|Face socoteli și joacă jocuri`.split('\n').map(s=>{const x=s.split('|');x.f=1;return x});
+POOL.push(...FUN);
+const WD=[['🌱','Capitolul I · Începuturi'],['🧭','Capitolul II · Explorare'],['🔭','Capitolul III · Descoperire'],['🏅','Capitolul IV · Măiestrie'],['👑','Capitolul V · Excelență']];
+const NP=8,TOT=WD.length*NP;
+function cfg(g){const l=Math.min(11,6+Math.floor(g/6));return{k:Math.min(12,4+Math.floor(g/4)),lim:l,a:g>=20?4:3,b:Math.min(l,4+Math.floor(g/3)),rev:g<NP,blur:g>=3*NP}}
+function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gen(D,seed){
+ const rnd=rng(seed);let best=[];
+ for(let t=0;t<(D.tries||40)&&best.length<D.k;t++){
+  const pool=(D.pool||POOL).filter(x=>x[0].length>=D.a&&x[0].length<=D.b).map(x=>[rnd()*(x.f?.45:1),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+  const g=new Map(),ws=[];let r0=D.mask?1e9:0,r1=D.mask?-1e9:0,c0=D.mask?1e9:0,c1=D.mask?-1e9:0;
+  const get=(r,c)=>g.get(r+','+c);
+  const fits=(w,r,c,d)=>{const dr=d=='D'?1:0,dc=1-dr;let hit=0;
+   if(get(r-dr,c-dc)||get(r+dr*w.length,c+dc*w.length))return 0;
+   for(let i=0;i<w.length;i++){const R=r+dr*i,C=c+dc*i,x=get(R,C);if(D.mask&&!D.mask(R,C))return 0;
+    if(x){if(x.ch!=w[i]||x[d])return 0;hit++}
+    else if(get(R+dc,C+dr)||get(R-dc,C-dr))return 0}
+   return hit};
+  const add=([w,e,tx],r,c,d)=>{const dr=d=='D'?1:0,dc=1-dr;
+   for(let i=0;i<w.length;i++){const R=r+dr*i,C=c+dc*i,k=R+','+C,x=g.get(k)||{ch:w[i]};x[d]=1;g.set(k,x)}
+   r0=Math.min(r0,r);c0=Math.min(c0,c);r1=Math.max(r1,r+dr*(w.length-1));c1=Math.max(c1,c+dc*(w.length-1));
+   ws.push([w,d,r,c,e,tx])};
+  if(D.mask){let f=pool.find(p=>{const L=p[0].length,c=D.sc-(L>>1);if(L<6)return 0;for(let i=0;i<L;i++)if(!D.mask(D.sr,c+i))return 0;return 1})||pool[0];add(f,D.sr,D.sc-(f[0].length>>1),'A')}else add(pool[0],0,0,'A');
+  for(const p of pool.slice(1)){if(ws.some(q=>q[0]==p[0]))continue;
+   if(ws.length>=D.k)break;
+   const w=p[0];let bs=-1,bp=null;
+   for(const [k,x] of g){const [R,C]=k.split(',').map(Number);
+    for(let i=0;i<w.length;i++)if(w[i]==x.ch)for(const d of 'AD'){
+     const r=d=='D'?R-i:R,c=d=='A'?C-i:C,h=fits(w,r,c,d);
+     if(!h)continue;
+     const nr=Math.max(r1,d=='D'?r+w.length-1:r)-Math.min(r0,r)+1,nc=Math.max(c1,d=='A'?c+w.length-1:c)-Math.min(c0,c)+1;
+     if(nr>D.lim||nc>D.lim)continue;
+     const s=h+rnd();if(s>bs){bs=s;bp=[r,c,d]}}}
+   if(bp)add(p,...bp)}
+  if(ws.length>best.length)best=ws.map(([w,d,r,c,e,tx])=>[w,d,r-(D.mask?0:r0),c-(D.mask?0:c0),e,tx]);
+ }
+ return best}
+//ENDGEN
+const $=s=>document.querySelector(s),CA={},CH=['Felicitări!','Excelent!','Foarte bine!','Bravo!'],FT=90;
+const TW=[['Relaxare','6 cuvinte, litere de start',{k:6,lim:7,a:3,b:6,rev:1}],['Clasic','8 cuvinte',{k:8,lim:9,a:3,b:8}],['Doar imagini','7 cuvinte, poze încețoșate',{k:7,lim:8,a:3,b:7,blur:1}],['Start ajutat','9 cuvinte, prima literă dată',{k:9,lim:9,a:3,b:8,rev:1}],['Grilă mare','11 cuvinte',{k:11,lim:10,a:4,b:9}],['Clasic Plus','10 cuvinte',{k:10,lim:10,a:3,b:9}],['Maraton','12 cuvinte',{k:12,lim:11,a:4,b:10}]];
+const BD=[['first','🥇','Prima integramă',s=>s.solved>=1],['s10','🧩','10 integrame',s=>s.solved>=10],['s25','🏆','Trofeu: 25 de integrame',s=>s.solved>=25],
+['dly','📅','Prima integramă a zilei',s=>s.daily>=1],['str3','🔥','Serie de 3 zile',s=>s.streak>=3],['str7','🏅','Trofeu: serie de 7 zile',s=>s.streak>=7],
+['fl','⚡','Primul fulger',s=>s.fl>=1],['fl5','🌩️','Trofeu: 5 fulgere',s=>s.fl>=5],['fast','🚀','Sub 60 de secunde',s=>s.best>0&&s.best<60],
+['cln','🎯','Fără niciun ajutor',s=>s.clean>=1],['ro','⭕','Cercul literelor',s=>s.ro>=1],['dl','⚔️','Primul duel',s=>s.dp>=1],['dw','🥊','Învingător la duel',s=>s.dw>=1],
+['top','🥈','Pe podiumul zilei',s=>s.top>=1],['rich','💰','200 de puncte strânse',()=>S.coins>=200],
+...WD.map(([i,n],w)=>['cap'+w,'🏆','Trofeu: capitolul '+(w+1),()=>[...Array(NP).keys()].every(j=>S.done[w*NP+j])])];
+const ST0={solved:0,clean:0,daily:0,fl:0,ro:0,hints:0,best:0,streak:0,last:'',dbest:0,dp:0,dw:0,top:0};
+let g0=0,cw=0,md='n',D0,ttl='',G,W,N,R=0,C=0,sel,dir,m='',sh=0,rv={},rw=0,fin=0,t0=0,tl=0,hu=0,db=null,usr=null,uid=null,duel=null,lt=0,rd=null,tq=0;
+let S={coins:20,done:{},p:{},b:{},cl:{},dw:{},dl:[],dsc:{},st:{...ST0}};
+try{const x=JSON.parse(localStorage.getItem('integrame3')||'{}');Object.assign(S,x);S.st={...ST0,...x.st}}catch(e){}
+function save(){try{localStorage.setItem('integrame3',JSON.stringify(S))}catch(e){}}
+const wi=g=>Math.floor(g/NP),open=g=>g==0||!!S.done[g-1],hash=s=>[...s].reduce((a,c)=>(a*31+c.charCodeAt(0))|0,7);
+const dk=d=>{d=d||new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')},yd=()=>dk(new Date(Date.now()-864e5));
+function coins(){document.querySelectorAll('.coin[id^=c]').forEach(e=>e.textContent='🪙 '+S.coins)}
+function toast(t){const e=$('#ts');e.textContent=(e.hidden?'':e.textContent+'\n')+t;e.hidden=false;clearTimeout(tq);tq=setTimeout(()=>e.hidden=true,3600)}
+function ovs(h){$('#ov').innerHTML=h;$('#ov').hidden=false}
+function chk(){BD.forEach(([id,ic,nm,f])=>{if(!S.b[id]&&f(S.st)){S.b[id]=dk();const b=nm.startsWith('Trofeu')?30:10;S.coins+=b;toast(ic+' '+nm+' · +'+b+' 🪙')}});save();coins()}
+function show(id){['today','home','lvl','game','lb','prof','rt'].forEach(s=>$('#'+s).hidden=s!=id);$('#ov').hidden=true;
+ $('#nav').hidden=id=='game'||id=='rt';document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==(id=='lvl'?'home':id)));window.scrollTo(0,0)}
+function wd(k,d){return W.find(w=>w.d==d&&w.cells.some(p=>p+''==k))}
+function strk(){return S.st.last==dk()||S.st.last==yd()?S.st.streak:0}
+function today(){const t=dk(),tw=TW[new Date().getDay()],dn=S.done['D'+t],c=(i,cl,ic,b,s,pg)=>`<button class="card ${cl}" id="${i}"><span class="ic">${ic}</span><span class="tx"><b>${b}</b><small>${s}</small></span><span class="pg">${pg}</span></button>`;
+ $('#dt').textContent=strk()?'🔥 Serie de '+strk()+(strk()==1?' zi':' zile'):'Începe o serie azi';
+ $('#td').innerHTML=c('bd','hero2','📅','Integrama zilei',new Date().toLocaleDateString('ro-RO',{weekday:'long',day:'numeric',month:'long'})+'<br>'+tw[0]+' · '+tw[1],dn?'✓ '+S.dsc[t]:'Joacă')
+ +c('bf','w3','⚡','Integrama fulger',FT+' de secunde, 5 cuvinte','Joacă')+c('br','w2','⭕','Cercul literelor','Litere amestecate într-un cerc','Joacă')+c('bu','w5','⚔️','Duel cu prietenii','Aceeași integramă, cine e mai bun?','');
+ show('today');coins();claim()}
+function home(){let tot=0;
+ $('#lv').innerHTML=WD.map(([ic,nm],w)=>{const dn=[...Array(NP).keys()].filter(i=>S.done[w*NP+i]).length,lk=!open(w*NP);tot+=dn;
+  return `<button class="card w${w}${lk?' lk':''}" data-w="${w}"><span class="ic">${lk?'🔒':ic}</span><span class="tx"><b>${nm}</b><small>${lk?'Termină capitolul dinainte ca să-l deschizi':NP+' integrame'}</small><span class="bar"><i style="width:${dn*100/NP}%"></i></span></span><span class="pg">${dn}/${NP}</span></button>`}).join('');
+ const p=Math.round(tot*100/TOT);$('#tp').textContent='Ai terminat '+tot+' din '+TOT+' integrame · '+p+'%';$('#tb').style.width=p+'%';coins();show('home')}
+function lvl(w){cw=w;$('#lt').textContent=WD[w][0]+' '+WD[w][1];$('#wm').textContent='';let h='';
+ for(let i=0;i<NP;i++){const g=w*NP+i,lk=!open(g),n=Object.keys(S.p[g]||{}).length;
+  h+=`<button class="tile w${w}${lk?' lk':''}" data-g="${g}">${lk?'🔒':i+1}<small>${S.done[g]?'✓':n?'…':''}</small></button>`}
+ $('#tl').innerHTML=h;coins();show('lvl')}
+function start(g,o){o=o||{};md=o.m||'n';g0=o.id!=null?o.id:g;D0=o.D||cfg(g);cw=wi(+g0||0);
+ ttl=o.t||WD[cw][0]+' '+WD[cw][1]+' · '+(g%NP+1);sh=0;m='';rw=0;fin=0;hu=0;rv={};t0=Date.now();tl=FT;G={};N={};R=0;C=0;
+ W=(CA[g0]=CA[g0]||gen(D0,o.seed||g*13+7)).map(([a,d,r,c,e,t])=>({a,d,r,c,e,t,cells:[...a].map((_,j)=>d=='A'?[r,c+j]:[r+j,c])}));
+ W.forEach(w=>w.cells.forEach(([r,c],j)=>{const q=r+','+c;R=Math.max(R,r+1);C=Math.max(C,c+1);
+  G[q]=G[q]||{ans:w.a[j],v:(S.p[g0]||{})[q]||'',g:0}}));
+ if(D0.mask){R=D0.N;C=D0.N}
+ const st=[...new Set(W.map(w=>w.r+','+w.c))].sort((x,y)=>{const[a,b]=x.split(',').map(Number),[c,d]=y.split(',').map(Number);return a-c||b-d});
+ W.forEach(w=>{w.n=st.indexOf(w.r+','+w.c)+1;N[w.r+','+w.c]=w.n;
+  if(D0.rev){const x=G[w.r+','+w.c];x.v=x.ans;x.g=1}});
+ sel=W[0].r+','+W[0].c;dir=W[0].d;show('game');draw()}
+function onWin(){const sec=Math.round((Date.now()-t0)/1000),st=S.st,cl=!hu;let fr=1;
+ if(md=='n'){fr=!S.done[g0];S.done[g0]=1;if(fr)rw=10+Math.floor(g0/2)+(cl?5:0)}
+ else if(md=='d'){fr=!S.done[g0];S.done[g0]=1;if(fr){const sc=Math.max(100,1500-sec*3-hu*120);S.dsc[dk()]=sc;rw=20+(cl?10:0);st.daily++;st.dbest=Math.max(st.dbest,sc);submit(sc,sec)}}
+ else if(md=='f'){fr=tl>0;if(fr){rw=15+Math.floor(tl/4);st.fl++}}
+ else if(md=='u'){fr=!S.done[g0];S.done[g0]=1;if(fr){rw=10;st.dp++;dsub(sec)}}
+ if(fr){S.coins+=rw;st.solved++;if(cl)st.clean++;st.best=st.best?Math.min(st.best,sec):sec;
+  if(st.last!=dk()){st.streak=st.last==yd()?st.streak+1:1;st.last=dk()}}
+ chk()}
+function winHTML(){const B=(c,i,x)=>`<button class="card ${c}" id="${i}">${x}</button>`;
+ const t=md=='d'?'Scor: '+S.dsc[dk()]+(rw?' · +'+rw+' 🪙':''):rw?'+'+rw+' 🪙'+(md=='f'?' · '+tl+'s rămase':hu?'':' (bonus: fără ajutor!)'):'Ai rezolvat-o din nou!';
+ return '<div><div class="big">🎉</div><h1>'+CH[(rw+hu)%4]+'</h1><p>'+t+'</p>'+(md=='n'&&g0+1<TOT?B('w1','nx','Următoarea integramă'):md=='d'?B('w3','lbb','Vezi clasamentul'):md=='f'?B('w3','fa','Alt fulger'):md=='u'?B('w3','dv','Vezi rezultatul'):'')+B('w0','mn','Înapoi')+'</div>'}
+function fit(){const w=$('#gw');if(!w.clientWidth||!C)return;
+ const s=Math.floor(Math.min(46,(w.clientWidth-3*(C-1))/C,(w.clientHeight-3*(R-1))/R));
+ $('#g').style.setProperty('--s',Math.max(s,16)+'px')}
+function draw(){
+ const w=wd(sel,dir),bl=D0.blur&&!rv[g0+w.a];
+ $('#tt').textContent=ttl;
+ $('#cl').innerHTML=`<div class="pic${bl?' bl':''}" id="pic">${w.e}</div><div><small>${w.n}${dir=='A'?' →':' ↓'} · ${w.a.length} litere</small><b>${w.t}</b>${bl?'<small>Atinge poza ca să o vezi</small>':''}</div>`;
+ const g=$('#g');g.style.setProperty('--n',C);let h='';
+ for(let r=0;r<R;r++)for(let c=0;c<C;c++){
+  const k=r+','+c,x=G[k];
+  if(!x){h+=D0.mask&&D0.mask(r,c)?'<i class="mk"></i>':'<i></i>';continue}
+  const inw=w.cells.some(p=>p+''==k);
+  h+=`<b data-k="${k}" class="${k==sel?'sel':inw?'hl':''}${x.bad?' bad':''}${x.g?' giv':''}">${N[k]?'<small>'+N[k]+'</small>':''}${x.v}</b>`}
+ g.innerHTML=h;
+ const wn=Object.values(G).every(x=>x.v==x.ans);
+ if(wn&&!fin){fin=1;onWin()}
+ coins();$('#m').textContent=m;$('#ov').hidden=!(wn||sh);
+ if(wn)$('#ov').innerHTML=winHTML();
+ else if(sh)$('#ov').innerHTML='<div><h1>Indicii</h1><ol>'+W.map((x,i)=>{
+  const dn=x.cells.every((p,j)=>G[p+''].v==x.a[j]),b=D0.blur&&!rv[g0+x.a];
+  return `<li data-i="${i}" class="${dn?'done':''}"><span style="${b?'filter:blur(8px)':''}">${x.e}</span><div>${x.n}${x.d=='A'?' →':' ↓'} ${x.t}</div></li>`}).join('')+'</ol><button class="card w1" id="cx">Închide</button></div>';
+ fit()}
+setInterval(()=>{if($('#game').hidden||fin)return;const s=Math.round((Date.now()-t0)/1000);
+ if(md=='f'){tl=Math.max(0,FT-s);if(!tl){fin=1;ovs('<div><div class="big">⏳</div><h1>Timpul a expirat</h1><p>Mai încearcă, ești aproape!</p><button class="card w3" id="fa">Alt fulger</button><button class="card w0" id="mn">Înapoi</button></div>')}}
+ $('#tm').textContent='⏱ '+(md=='f'?tl+'s':Math.floor(s/60)+':'+String(s%60).padStart(2,'0'))},1000);
+function tap(k){const o=dir=='A'?'D':'A';m='';
+ if(sel==k){if(wd(k,o))dir=o}else{sel=k;if(!wd(k,dir))dir=o}draw()}
+function mv(s){const w=wd(sel,dir),i=w.cells.findIndex(p=>p+''==sel),p=w.cells[i+s];if(p)sel=p+''}
+function after(){if(md=='n'||md=='d'){const o={};for(const k in G)if(G[k].v&&!G[k].g)o[k]=G[k].v;S.p[g0]=o}save();draw()}
+function type(ch){const x=G[sel];m='';if(!x.g){x.v=ch;x.bad=0}mv(1);after()}
+function del(){const x=G[sel];m='';
+ if(x.v&&!x.g)x.v='';else{mv(-1);const h=G[sel];if(!h.g)h.v=''}after()}
+function buy(c,f){if(S.coins<c){m='Îți trebuie '+c+' 🪙. Mai rezolvă o integramă!';return draw()}f();S.coins-=c;hu++;S.st.hints++;m='';after()}
+async function submit(sc,sec){if(!db||!uid)return;try{await db.doc('scores/'+dk()+'_'+uid).set({d:dk(),u:uid,s:sc,t:sec,h:hu})}catch(e){}}
+async function dsub(sec){if(!db||!uid||!duel)return;try{await db.doc('duels/'+duel+'/r/'+uid).set({u:uid,t:sec,h:hu,s:Math.max(100,1500-sec*3-hu*120)})}catch(e){}}
+async function claim(){if(!db||!uid||S.cl[yd()])return;const y=yd();
+ try{const q=await db.collection('scores').where('d','==',y).get(),r=q.docs.map(x=>x.data()).sort((a,b)=>b.s-a.s).slice(0,3),i=r.findIndex(v=>v.u==uid);S.cl[y]=1;
+  if(i>=0){const p=[50,30,20][i];S.coins+=p;S.st.top++;toast(['🥇','🥈','🥉'][i]+' Ai fost pe locul '+(i+1)+' ieri! +'+p+' 🪙')}chk()}catch(e){}}
+async function lbv(){show('lb');$('#lbt').innerHTML=['Azi','Ieri','7 zile'].map((x,i)=>`<button data-i="${i}" class="${i==lt?'on':''}">${x}</button>`).join('');coins();
+ $('#dh').innerHTML=S.dl.slice(-3).map(c=>`<button data-c="${c}">Duel ${c}</button>`).join('');
+ const el=$('#lbl');if(!db){el.innerHTML='<p class="wm">Clasamentul și duelurile funcționează doar când ești conectat la contul Claude.</p>';return}
+ el.innerHTML='<p class="wm">Se încarcă…</p>';
+ try{const f=lt==2?dk(new Date(Date.now()-6*864e5)):lt==1?yd():dk(),to=lt==1?yd():dk();
+  const q=await db.collection('scores').where('d','>=',f).where('d','<=',to).get(),a={};
+  q.docs.forEach(x=>{const v=x.data();a[v.u]=(a[v.u]||0)+v.s});
+  const r=Object.entries(a).sort((p,q)=>q[1]-p[1]).slice(0,30),ps=usr?await usr.profiles(r.map(x=>x[0])):{};
+  el.innerHTML=r.length?r.map(([u,s],i)=>`<li class="${u==uid?'me':''}"><b>${['🥇','🥈','🥉'][i]||i+1}</b><span>${(ps[u]&&ps[u].name)||'Jucător'}</span><em>${s}</em></li>`).join(''):'<p class="wm">Încă nu e nimeni în clasament. Fii primul! Primii 3 din fiecare zi câștigă puncte.</p>'}
+ catch(e){el.innerHTML='<p class="wm">Nu am putut încărca clasamentul.</p>'}}
+function duelGo(c){duel=c;if(!S.dl.includes(c))S.dl.push(c);save();start(0,{m:'u',id:'U'+c,D:{k:7,lim:8,a:3,b:7},seed:hash(c),t:'⚔️ Duel '+c})}
+async function mkduel(){if(!db||!uid)return toast('Duelul nu e disponibil acum');
+ const c=Array.from({length:5},()=>'ABCDEFGHJKLMNPQRSTUVWXYZ'[Math.random()*24|0]).join('');
+ try{await db.doc('duels/'+c).set({c:Date.now(),u:uid});toast('Codul duelului: '+c+'\nTrimite-l prietenilor');duelGo(c)}catch(e){toast('Nu am putut crea duelul')}}
+async function joinduel(){const c=$('#dc').value.trim().toUpperCase();if(c.length!=5)return toast('Codul are 5 litere');if(!db)return toast('Duelul nu e disponibil acum');
+ try{const d=await db.doc('duels/'+c).get();d.exists?duelGo(c):toast('Cod necunoscut')}catch(e){toast('Nu am putut intra în duel')}}
+async function duelRes(c){duel=c;ovs('<div><h1>⚔️ Duel '+c+'</h1><ol id="dr"><li>Se încarcă…</li></ol><p>Trimite codul prietenilor ca să joace aceeași integramă.</p><button class="card w1" id="cx">Închide</button></div>');
+ try{const q=await db.collection('duels/'+c+'/r').get(),r=q.docs.map(x=>x.data()).sort((a,b)=>b.s-a.s),ps=usr?await usr.profiles(r.map(x=>x.u)):{};
+  $('#dr').innerHTML=r.length?r.map((v,i)=>`<li><span>${['🥇','🥈','🥉'][i]||i+1}</span><div>${(ps[v.u]&&ps[v.u].name)||'Jucător'} · ${v.t}s · ${v.s} p${v.h?' · '+v.h+' ajutoare':''}</div></li>`).join(''):'<li>Nimeni nu a terminat încă.</li>';
+  if(r.length>1&&r[0].u==uid&&!S.dw[c]){S.dw[c]=1;S.coins+=20;S.st.dw++;toast('🥊 Ai câștigat duelul! +20 🪙');chk()}}
+ catch(e){$('#dr').innerHTML='<li>Nu am putut încărca rezultatul.</li>'}}
+function prof(){const s=S.st;show('prof');
+ $('#pf').innerHTML='<div class="stats">'+[['🧩',s.solved,'Integrame rezolvate'],['🔥',strk(),'Zile la rând'],['⚡',s.fl,'Fulgere reușite'],['📅',s.daily,'Integrame zilnice'],['🎯',s.clean,'Fără ajutor'],['🚀',s.best?s.best+'s':'–','Cel mai rapid timp'],['🏆',s.dbest||'–','Cel mai bun scor zilnic'],['⚔️',s.dp+' / '+s.dw,'Dueluri / victorii'],['⭕',s.ro,'Cercuri completate'],['🪙',S.coins,'Puncte']].map(([i,v,l])=>`<div><span>${i}</span><b>${v}</b><small>${l}</small></div>`).join('')
+ +'</div><h2>Insigne și trofee ('+Object.keys(S.b).length+'/'+BD.length+')</h2><div class="bd">'+BD.map(([id,ic,nm])=>`<div class="${S.b[id]?'':'off'}"><span>${ic}</span><small>${nm}</small></div>`).join('')+'</div>';coins()}
+function rtStart(){md='r';rd={ws:POOL.filter(x=>x[0].length>=5&&x[0].length<=8).sort(()=>Math.random()-.5).slice(0,5),i:0,s:'',u:[],o:0};show('rt');rtDraw()}
+function rtDraw(){const [w,e,t]=rd.ws[rd.i],n=w.length;
+ if(!rd.o){let o;do{o=[...w].map((c,j)=>j).sort(()=>Math.random()-.5)}while(o.every((v,j)=>v==j));rd.o=o}
+ $('#rc').innerHTML=`<div class="pic">${e}</div><div><small>Cuvântul ${rd.i+1} din 5 · ${n} litere</small><b>${t}</b></div>`;
+ $('#rw').innerHTML=rd.o.map((j,k)=>{const a=-Math.PI/2+k*2*Math.PI/n;return `<button data-j="${j}" style="left:${50+38*Math.cos(a)}%;top:${50+38*Math.sin(a)}%"${rd.u.includes(j)?' disabled':''}>${w[j]}</button>`}).join('')+'<div id="rs">'+rd.s+'</div>';coins()}
+$('#rw').onclick=e=>{const b=e.target.closest('button');if(!b||b.disabled)return;const j=+b.dataset.j,w=rd.ws[rd.i][0];rd.u.push(j);rd.s+=w[j];
+ if(rd.s.length<w.length)return rtDraw();
+ if(rd.s==w){S.coins+=3;rd.s='';rd.u=[];rd.o=0;
+  if(++rd.i>=5){S.coins+=10;S.st.ro++;chk();return ovs('<div><div class="big">⭕</div><h1>Cercul complet!</h1><p>+25 🪙</p><button class="card w2" id="ra">Încă o rundă</button><button class="card w0" id="mn">Înapoi</button></div>')}
+  save();rtDraw()}
+ else{rd.s='';rd.u=[];rtDraw();$('#rw').classList.add('sh');setTimeout(()=>$('#rw').classList.remove('sh'),400)}};
+function startF(){start(0,{m:'f',id:'F'+Date.now(),D:{k:5,lim:7,a:3,b:6,rev:1},seed:Date.now()%99991,t:'⚡ Fulger'})}
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(b)({today,home,lb:lbv,prof})[b.dataset.t]()};
+$('#td').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.id=='bd')start(0,{m:'d',id:'D'+dk(),D:TW[new Date().getDay()][2],seed:hash(dk()),t:'📅 Integrama zilei'});
+ else if(b.id=='bf')startF();else if(b.id=='br')rtStart();else lbv()};
+$('#lv').onclick=e=>{const b=e.target.closest('button');if(b&&!b.classList.contains('lk'))lvl(+b.dataset.w)};
+$('#tl').onclick=e=>{const b=e.target.closest('button');if(!b)return;const g=+b.dataset.g;
+ if(open(g))start(g);else $('#wm').textContent='Rezolvă integrama dinainte ca s-o deblochezi 🔒'};
+$('#lb2').onclick=home;
+$('#bk').onclick=()=>md=='n'?lvl(cw):today();
+$('#rb').onclick=today;
+$('#li').onclick=()=>{sh=1;draw()};
+$('#lbt').onclick=e=>{const b=e.target.closest('button');if(b){lt=+b.dataset.i;lbv()}};
+$('#dn').onclick=mkduel;$('#dj').onclick=joinduel;
+$('#dh').onclick=e=>{const b=e.target.closest('button');if(b)duelRes(b.dataset.c)};
+$('#g').onclick=e=>{const b=e.target.closest('b');if(b)tap(b.dataset.k)};
+$('#cl').onclick=e=>{if(e.target.id=='pic'&&D0.blur){rv[g0+wd(sel,dir).a]=1;draw()}};
+$('#ov').onclick=e=>{const t=e.target;
+ if(t.id=='nx')start(g0+1);
+ else if(t.id=='mn')md=='n'?lvl(cw):today();
+ else if(t.id=='fa')startF();
+ else if(t.id=='ra')rtStart();
+ else if(t.id=='lbb')lbv();
+ else if(t.id=='dv')duelRes(duel);
+ else if(t.id=='cx'||t.id=='ov'){sh=0;if($('#game').hidden)$('#ov').hidden=true;else draw()}
+ else{const li=t.closest('li');if(li&&li.dataset.i){const w=W[li.dataset.i];sel=w.r+','+w.c;dir=w.d;sh=0;m='';draw()}}};
+$('#ck').onclick=()=>{let n=0;for(const k in G){const x=G[k];if(x.v&&x.v!=x.ans&&!x.g){x.bad=1;n++}}
+ m=n?(n==1?'O literă nu este corectă':n+' litere nu sunt corecte'):'Până acum totul e corect 👍';draw()};
+$('#hn').onclick=()=>{const x=G[sel];if(x.g||x.v==x.ans){m='Litera e deja corectă 😉';return draw()}buy(5,()=>{x.v=x.ans;x.bad=0})};
+$('#wb').onclick=()=>{const w=wd(sel,dir);if(w.cells.every((p,j)=>G[p+''].v==w.a[j])){m='Cuvântul e deja gata 😉';return draw()}
+ buy(15,()=>w.cells.forEach((p,j)=>{const x=G[p+''];x.v=w.a[j];x.bad=0}))};
+$('#kb').innerHTML=['QWERTYUIOP','ASDFGHJKL','ZXCVBNM'].map((r,i)=>'<div>'+[...r].map(c=>`<button data-c="${c}">${c}</button>`).join('')+(i==2?'<button class="w" data-c="⌫">⌫</button>':'')+'</div>').join('');
+$('#kb').onclick=e=>{const b=e.target.closest('button');if(!b)return;b.dataset.c=='⌫'?del():type(b.dataset.c)};
+document.addEventListener('keydown',e=>{if(e.metaKey||e.ctrlKey||$('#game').hidden||e.target.tagName=='INPUT')return;if(/^[a-z]$/i.test(e.key))type(e.key.toUpperCase());else if(e.key=='Backspace')del()});
+window.addEventListener('resize',fit);
+/* === CLASAMENT / DUELURI PUBLICE (Firebase Realtime Database, gratuit) ===
+   Pune între ghilimele adresa bazei de date, ex: 'https://brainzone-xxxx-default-rtdb.europe-west1.firebasedatabase.app' */
+const FB_URL='https://brainzone-62262-default-rtdb.europe-west1.firebasedatabase.app';
+function fbDb(base){base=base.replace(/\/+$/,'');
+ const j=async(p,o,q)=>{const r=await fetch(base+'/'+p+'.json'+(q||''),o);if(!r.ok)throw new Error(r.status);return r.json()};
+ const q=s=>JSON.stringify(s);
+ const doc=path=>({set:d=>j(path,{method:'PUT',body:JSON.stringify(d)}),get:async()=>{const v=await j(path);return{exists:v!=null,data:()=>v}}});
+ const col=(path,f)=>({where(k,op,v){return col(path,(f||[]).concat([[k,op,v]]))},async get(){
+  let qs='';if(f&&f.length){const k=f[0][0];qs='?orderBy='+encodeURIComponent(q(k));
+   for(const [,op,v] of f){const p=op=='=='?'equalTo':op=='>='?'startAt':'endAt';qs+='&'+p+'='+encodeURIComponent(q(v))}}
+  const v=await j(path,null,qs)||{};return{docs:Object.values(v).map(x=>({data:()=>x}))}}});
+ return{doc,collection:p=>col(p)}}
+(async()=>{try{
+ if(window.claude){db=await claude.use('db');const u=await claude.use('user');if(u){usr=u;uid=await u.id()}}
+ else if(FB_URL){db=fbDb(FB_URL);usr={profiles:async()=>({})};let id='';try{id=localStorage.getItem('bzuid')||''}catch(e){}
+  if(!id){id=Array.from(crypto.getRandomValues(new Uint8Array(12)),b=>(b%36).toString(36)).join('');try{localStorage.setItem('bzuid',id)}catch(e){}}uid=id}
+ if(db&&!$('#today').hidden)claim()}catch(e){}})();
+//TH
+const CT=['🇷🇴 România și tradiții','🌍 Călătorii și geografie','🐾 Animale și natură','🍽️ Mâncare și gastronomie','🎬 Filme, seriale și divertisment','🎵 Muzică','🏛️ Istorie și cultură','🔬 Știință și educație','🏠 Viața de zi cu zi','❤️ Familie, dragoste și societate','⚽ Sport și competiții','🎯 Distracție și provocări','🎉 Speciale și sezoniere'];
+const TH=`#0|Județele României|🗺️
+CLUJ|🏙️|Reședința: Cluj-Napoca
+IASI|🏛️|Orașul cu Palatul Culturii
+ARAD|🌉|Oraș pe Mureș, în vest
+SIBIU|🏰|Are Turnul Sfatului
+BRASOV|⛰️|Are Biserica Neagră și Tâmpa
+BIHOR|🌄|Reședința: Oradea
+DOLJ|🌾|Reședința: Craiova
+TULCEA|🦢|Poarta Deltei Dunării
+GALATI|⚓|Mare port la Dunăre
+MURES|🌲|Reședința: Târgu Mureș
+ARGES|🏞️|Reședința: Pitești
+OLT|🌊|Reședința: Slatina
+#0|Tradiții românești|🎎
+MARTISOR|🎀|Se oferă la 1 martie
+COLINDA|🎄|Se cântă de Crăciun
+PLUGUSOR|🐂|Urare de Anul Nou
+HORA|💃|Dans în cerc
+SARMALE|🥬|Carne în foi de varză
+COZONAC|🍞|Prăjitură de sărbători
+ICOANA|🖼️|Imagine sfântă din casă
+DOINA|🎶|Cântec popular de dor
+CLACA|🏡|Muncă în comun, cu voie bună
+OPINCI|👞|Încălțăminte țărănească
+CIOBAN|🐑|Păzește oile la stână
+OUA|🥚|Se încondeiază de Paști
+#0|Munții Carpați|⛰️
+RETEZAT|🏔️|Parc național cu lacuri glaciare
+BUCEGI|🌄|Au Sfinxul și Babele
+FAGARAS|🏔️|Au vârful Moldoveanu
+PARANG|⛰️|Munți deasupra Văii Jiului
+CEAHLAU|🌲|Masiv cu Toaca și Dochia
+RODNEI|🏔️|Au vârful Pietrosu
+APUSENI|⛰️|Munți cu peșteri, în vest
+CALIMANI|🌋|Au un vulcan stins
+BUZAU|⛰️|Munți din Curbura Carpaților
+SEMENIC|🌲|Munți din Banat
+#1|Capitalele lumii|🌍
+PARIS|🇫🇷|Capitala Franței
+ROMA|🇮🇹|Capitala Italiei
+MADRID|🇪🇸|Capitala Spaniei
+BERLIN|🇩🇪|Capitala Germaniei
+LONDRA|🇬🇧|Capitala Regatului Unit
+VIENA|🇦🇹|Capitala Austriei
+ATENA|🇬🇷|Capitala Greciei
+LISABONA|🇵🇹|Capitala Portugaliei
+TOKIO|🇯🇵|Capitala Japoniei
+CAIRO|🇪🇬|Capitala Egiptului
+OTTAWA|🇨🇦|Capitala Canadei
+BUDAPESTA|🇭🇺|Capitala Ungariei
+VARSOVIA|🇵🇱|Capitala Poloniei
+BRASILIA|🇧🇷|Capitala Braziliei
+#1|Țările lumii|🧭
+ITALIA|🇮🇹|Țara cu forma de cizmă
+SPANIA|🇪🇸|Țara flamenco-ului
+FRANTA|🇫🇷|Țara Turnului Eiffel
+GRECIA|🇬🇷|Leagănul democrației
+JAPONIA|🇯🇵|Țara Soarelui Răsare
+BRAZILIA|🇧🇷|Țara carnavalului din Rio
+CANADA|🇨🇦|Țara cu frunza de arțar
+EGIPT|🇪🇬|Țara piramidelor
+INDIA|🇮🇳|Țara cu Taj Mahal
+CHINA|🇨🇳|Țara Marelui Zid
+MEXIC|🇲🇽|Țara tacos-ului
+NORVEGIA|🇳🇴|Țara fiordurilor
+#2|Păsări|🦅
+VULTUR|🦅|Rege al înălțimilor
+BUFNITA|🦉|Vede bine noaptea
+PINGUIN|🐧|Nu zboară, dar înoată
+FLAMINGO|🦩|Pasăre roz
+PAPAGAL|🦜|Repetă cuvinte
+PAUN|🦚|Își deschide coada evantai
+LEBADA|🦢|Pasăre albă și elegantă
+GAINA|🐔|Face ouă în ogradă
+PORUMBEL|🕊️|Simbolul păcii
+RATA|🦆|Înoată în baltă
+CUC|🐦|Își pune ouăle în cuibul altora
+#2|Animale marine|🐋
+BALENA|🐋|Cel mai mare mamifer
+DELFIN|🐬|Inteligent și jucăuș
+RECHIN|🦈|Pește cu mulți dinți
+CRAB|🦀|Merge într-o parte
+FOCA|🦭|Mamifer marin cu mustăți
+TESTOASA|🐢|Lentă, trăiește mult
+PESTE|🐟|Respiră cu branhii
+CALAMAR|🦑|Are zece brațe
+CORAL|🌊|Recif viu și colorat
+#2|Fructe și legume|🥕
+MORCOV|🥕|Portocaliu, bun pentru ochi
+ROSIE|🍅|Legumă roșie de salată
+CARTOF|🥔|Se face piure
+CASTRAVETE|🥒|Verde și crocant
+ARDEI|🌶️|Poate fi iute
+PORUMB|🌽|Are știuleți aurii
+CEAPA|🧅|Te face să plângi
+USTUROI|🧄|Alungă vampirii
+VINETE|🍆|Legumă violetă
+BROCCOLI|🥦|Mic copac verde
+CIUPERCA|🍄|Crește în pădure după ploaie
+LAMAIE|🍋|Fruct acru
+PEPENE|🍉|Roșu și zemos
+#3|Bucătărie românească|🍲
+SARMALE|🥬|Carne în foi de varză
+MAMALIGA|🌽|Din făină de porumb
+MICI|🔥|Se fac la grătar
+COZONAC|🍞|Pufos, cu nucă
+PAPANASI|🍩|Cu smântână și dulceață
+CIORBA|🍲|Supă acrișoară
+PLACINTA|🥧|Cu brânză sau dovleac
+BORS|🥣|Supă acră cu tarhon
+SALATA|🥗|De boeuf sau de roșii
+SLANINA|🥓|Afumată, cu ceapă
+COVRIG|🥨|Împletit, cu sare
+TOCHITURA|🍖|Carne în sos, cu mămăligă
+#3|Bucătărie italiană|🍝
+PIZZA|🍕|Rotundă, cu mozzarella
+PASTE|🍝|Spaghete, penne
+LASAGNA|🍝|Foi de paste cu sos
+RISOTTO|🍚|Orez cremos
+TIRAMISU|🍰|Desert cu cafea
+GELATO|🍨|Înghețată italiană
+PANINI|🥪|Sandvișuri la grill
+BRUSCHETA|🍅|Pâine prăjită cu roșii
+GNOCCHI|🥔|Găluște de cartofi
+MOZZARELLA|🧀|Brânză de pizza
+ESPRESSO|☕|Cafea scurtă și tare
+CAPPUCCINO|☕|Cafea cu spumă de lapte
+#5|Instrumente muzicale|🎵
+CHITARA|🎸|Are șase corzi
+PIAN|🎹|Clape albe și negre
+VIOARA|🎻|Se cântă cu arcușul
+TOBA|🥁|O lovești cu bețe
+TRAMBITA|🎺|Instrument de suflat din alamă
+SAXOFON|🎷|Instrument de jazz
+FLUIER|🎶|Instrumentul ciobanilor
+HARPA|🎼|Are multe corzi ciupite
+ORGA|⛪|Instrument mare din biserici
+CLARINET|🎶|Instrument de suflat din lemn
+ACORDEON|🎶|Se întinde și se strânge
+#0|Domnitori români|👑
+STEFAN|🏰|Cel Mare, domn al Moldovei
+MIRCEA|⚔️|Cel Bătrân, domn muntean
+MIHAI|🛡️|Viteazul, a unit trei țări
+VLAD|🧛|Țepeș, domn al Țării Românești
+CUZA|📜|Domnitorul Unirii din 1859
+CAROL|👑|Primul rege al României
+BASARAB|⚔️|Dinastie domnitoare muntenească
+ALEXANDRU|📜|Prenumele lui Cuza
+MATEI|⚔️|Basarab, domn în secolul XVII
+FERDINAND|👑|Regele Marii Uniri
+CONSTANTIN|📜|Prenumele lui Brâncoveanu
+#6|Mitologie greacă|⚡
+ZEUS|⚡|Regele zeilor
+ATENA|🦉|Zeița înțelepciunii
+APOLO|☀️|Zeul muzicii și al luminii
+HERMES|👟|Mesagerul zeilor
+ARES|⚔️|Zeul războiului
+HADES|💀|Stăpânul lumii de dincolo
+POSEIDON|🔱|Zeul mărilor
+AFRODITA|💘|Zeița iubirii
+HERA|👑|Soția lui Zeus
+TITAN|🗿|Uriaș din vechime
+PEGAS|🐴|Calul înaripat
+MINOTAUR|🐂|Monstrul din labirint
+MEDUZA|🐍|Are șerpi în loc de păr
+#7|Sistemul solar|🪐
+MERCUR|🌑|Cea mai apropiată de Soare
+VENUS|🌕|Cea mai fierbinte planetă
+PAMANT|🌍|Planeta noastră
+MARTE|🔴|Planeta roșie
+JUPITER|🪐|Cea mai mare planetă
+SATURN|🪐|Planeta cu inele
+URANUS|🔵|Planeta înclinată
+NEPTUN|🔵|A opta planetă
+LUNA|🌙|Satelitul Pământului
+COMETA|☄️|Are coadă luminoasă
+SOARE|☀️|Steaua noastră
+GALAXIE|🌌|Milioane de stele
+#7|Corpul uman|🧍
+INIMA|❤️|Pompează sângele
+PLAMANI|🫁|Cu ei respirăm
+CREIER|🧠|Gândește și ține minte
+OCHI|👁️|Văd lumea
+URECHE|👂|Aude sunete
+DINTE|🦷|Se spală de două ori pe zi
+SCHELET|💀|Totalul oaselor
+MANA|✋|Are cinci degete
+PICIOR|🦶|Te duce la mers
+STOMAC|🍽️|Digeră mâncarea
+FICAT|🩺|Organ mare din dreapta
+PIELE|🧴|Cel mai mare organ
+#0|România – cultură generală|🇷🇴
+BUCURESTI|🏙️|Capitala țării
+TRICOLOR|🇷🇴|Steagul cu albastru, galben și roșu
+DUNAREA|🌊|Fluviul de la granița de sud
+LEU|💰|Moneda națională
+UNIREA|📜|Eveniment din 1859 și din 1918
+DELTA|🦢|Unde se varsă Dunărea în mare
+MARAMURES|🛖|Regiune cu porți de lemn sculptate
+BUCOVINA|⛪|Regiune cu mănăstiri pictate pe dinafară
+BANAT|🌾|Regiune din vest, cu Timișoara
+OLTENIA|🏞️|Regiune cu Craiova
+DOBROGEA|🏖️|Regiune cu litoral la mare
+MOLDOVA|🍇|Regiune cu Iași și Suceava
+MUNTENIA|🏙️|Regiunea în care se află capitala
+#0|Orașele României|🏙️
+TIMISOARA|🌷|Oraș mare din Banat
+ORADEA|🏰|Oraș cu cetate pe Crișul Repede
+CONSTANTA|⚓|Mare port la Marea Neagră
+PLOIESTI|🛢️|Oraș al petrolului
+CRAIOVA|🏙️|Oraș mare din Oltenia
+BRAILA|🚢|Port la Dunăre, în Muntenia
+SUCEAVA|🏰|Oraș cu cetatea lui Ștefan cel Mare
+IASI|🏛️|Orașul cu Palatul Culturii
+SIBIU|🏰|Oraș cu Piața Mare și Turnul Sfatului
+BRASOV|⛰️|Oraș la poalele Tâmpei
+ARAD|🌉|Oraș pe Mureș, în vest
+DEVA|🏰|Oraș cu cetate pe un deal
+SINAIA|🏔️|Oraș de munte cu Castelul Peleș
+PITESTI|🏙️|Oraș din județul Argeș
+#0|Dunărea și Delta Dunării|🦢
+PELICAN|🐦|Pasăre mare, cu pungă sub cioc
+CORMORAN|🐦|Pasăre neagră care prinde pește
+SULINA|⚓|Port la gura Dunării
+TULCEA|🏙️|Poarta Deltei
+NUFAR|🪷|Floare albă care plutește pe apă
+STUR|🐟|Pește mare din care se scot icre negre
+LOTCA|🛶|Barcă mică din Deltă
+STUF|🌾|Trestie înaltă din Deltă
+BAC|⛴️|Trece mașini de pe un mal pe altul
+VAPOR|🚢|Navighează pe Dunăre
+CANAL|🛶|Apă făcută de om pentru bărci
+BARAJ|🌊|Zid care oprește apa
+PESCAR|🎣|Prinde pește cu undița
+#0|Castele și cetăți|🏰
+PELES|🏰|Castel regal din Sinaia
+BRAN|🧛|Castel legat de legenda lui Dracula
+CORVIN|🏰|Castel din Hunedoara
+RASNOV|🏰|Cetate țărănească lângă Brașov
+POIENARI|🏰|Cetate de pe un munte, legată de Vlad Țepeș
+NEAMT|🏰|Cetate din Moldova a lui Ștefan cel Mare
+TURN|🗼|Parte înaltă a unui castel
+ZID|🧱|Apără cetatea
+SANT|🌊|Apa din jurul zidurilor
+ARCAS|🏹|Apără cetatea cu arcul
+STEAG|🚩|Flutură pe turn
+CAVALER|🛡️|Luptător cu armură și cal
+#0|România interbelică|📻
+FERDINAND|👑|Regele Marii Uniri
+MARIA|👑|Regina, soția lui Ferdinand
+MIHAI|👑|Ultimul rege al României
+CAROL|👑|Rege între 1930 și 1940
+ALBA|🏰|Orașul Marii Uniri
+TRAMVAI|🚋|Merge pe șine, prin oraș
+RADIO|📻|A început să emită în 1928
+CINEMA|🎬|Sală cu ecran mare
+ENESCU|🎻|Compozitor al Rapsodiilor române
+BRANCUSI|🗿|Sculptor al Coloanei Infinitului
+ARC|🏛️|Arcul de Triumf din București
+AVION|✈️|Zboară pe cer
+#0|Personalități românești|🌟
+ENESCU|🎻|Compozitor și violonist
+BRANCUSI|🗿|Sculptor celebru
+EMINESCU|✍️|Poetul național
+CARAGIALE|🎭|Autor al piesei O scrisoare pierdută
+CREANGA|📖|Autor al Amintirilor din copilărie
+COMANECI|🤸|Gimnasta cu primul 10 perfect
+HAGI|⚽|Regele fotbalului românesc
+VUIA|🛩️|Inventator care a zburat în 1906
+COANDA|✈️|Constructor de avion cu reacție
+PALADE|🔬|Premiat Nobel pentru biologie
+SLAVICI|📖|Autorul nuvelei Moara cu noroc
+#0|Bucătăria tradițională românească|🍲
+BALMOS|🍲|Mâncare ciobănească din smântână și mălai
+JUMARI|🥓|Rămân după topirea grăsimii de porc
+PASTRAMA|🥩|Carne sărată și afumată
+TELEMEA|🧀|Brânză sărată
+URDA|🧀|Brânză din zer
+ZACUSCA|🍅|Din vinete și ardei, se întinde pe pâine
+MURATURI|🥒|Castraveți în saramură
+CARNATI|🌭|Cârnați de la țară
+COLAC|🥖|Pâine împletită de sărbători
+TUICA|🥃|Băutură din prune
+CIORBA|🍲|Supă acrișoară
+#0|Folclor și port popular|👘
+CAMASA|👚|Se brodează cu motive populare
+FOTA|👗|Se poartă peste cămașă la portul popular
+CATRINTA|👗|Fustă populară
+OPINCI|👞|Încălțăminte țărănească
+BRAU|🧵|Cureaua lată din portul popular
+CHEPTAR|🦺|Vestă din blană
+CALUSARI|💃|Dansatori cu bețe și zurgălăi
+BALADA|📜|Poveste cântată
+MIORITA|🐑|Baladă cu oaia năzdrăvană
+HORA|💃|Dans în cerc
+DOINA|🎶|Cântec de dor
+FLUIER|🎶|Instrumentul ciobanilor
+#0|Mănăstiri și monumente|⛪
+VORONET|⛪|Mănăstire cu albastru faimos
+SUCEVITA|⛪|Mănăstire pictată, cu ziduri înalte
+HUMOR|⛪|Mănăstire pictată din Bucovina
+PUTNA|⛪|Aici se odihnește Ștefan cel Mare
+HOREZU|⛪|Mănăstire brâncovenească din Vâlcea
+COLOANA|🗿|Coloana fără sfârșit
+TARGUJIU|🗿|Orașul cu Masa Tăcerii
+PALATUL|🏛️|Clădirea uriașă a Parlamentului
+ATENEUL|🎼|Sală de concerte din București
+ICOANA|🖼️|Imagine sfântă
+CLOPOT|🔔|Sună din turnul bisericii
+TOACA|🔔|Lemn lovit pentru chemarea la slujbă
+#0|Bucureștiul de altădată|🚋
+MOGOSOAIA|🏰|Palat brâncovenesc de lângă capitală
+CISMIGIU|🌳|Grădină din centrul capitalei
+HERASTRAU|🌳|Parc mare cu lac
+LIPSCANI|🛍️|Stradă cu magazine din Centrul Vechi
+CARUTA|🐎|Vehicul tras de cai
+FELINAR|🏮|Lumină de stradă pe gaz
+MAHALA|🏘️|Cartier vechi de periferie
+HAN|🍷|Loc de popas pentru călători
+MANUC|🍷|Hanul din Centrul Vechi
+DAMBOVITA|🌊|Râul capitalei
+ATENEUL|🎼|Sală de concerte rotundă
+TRAMVAI|🚋|Merge pe șine
+#1|Capitale europene|🇪🇺
+BERLIN|🇩🇪|Capitala Germaniei
+MADRID|🇪🇸|Capitala Spaniei
+LISABONA|🇵🇹|Capitala Portugaliei
+VIENA|🇦🇹|Capitala Austriei
+ATENA|🇬🇷|Capitala Greciei
+OSLO|🇳🇴|Capitala Norvegiei
+BERNA|🇨🇭|Capitala Elveției
+PRAGA|🇨🇿|Capitala Cehiei
+SOFIA|🇧🇬|Capitala Bulgariei
+DUBLIN|🇮🇪|Capitala Irlandei
+HELSINKI|🇫🇮|Capitala Finlandei
+AMSTERDAM|🇳🇱|Capitala Olandei
+BRUXELLES|🇧🇪|Capitala Belgiei
+VARSOVIA|🇵🇱|Capitala Poloniei
+#1|Insule celebre|🏝️
+CORSICA|🏝️|Insula lui Napoleon
+SICILIA|🌋|Insulă cu vulcanul Etna
+CIPRU|🏝️|Insula Afroditei
+CRETA|🏛️|Insulă greacă cu Minotaurul
+MALTA|⚓|Insulă-stat din Mediterana
+ISLANDA|🌋|Insulă cu gheizere și vulcani
+IRLANDA|☘️|Insula verde cu trifoi
+CUBA|🏝️|Insulă din Caraibe
+BALI|🛕|Insulă indoneziană cu temple
+HAWAII|🌺|Arhipelag din Pacific, cu coliere de flori
+MADEIRA|🌺|Insula florilor, portugheză
+RODOS|🏝️|Insulă greacă cu un Colos
+#1|Oceane și mări|🌊
+ATLANTIC|🌊|Ocean între Europa și America
+PACIFIC|🌊|Cel mai mare ocean
+INDIAN|🌊|Oceanul de lângă India
+ARCTIC|🧊|Oceanul de la Polul Nord
+NEAGRA|🌊|Marea de la Constanța
+BALTICA|🌊|Mare din nordul Europei
+ADRIATICA|🌊|Marea dintre Italia și Croația
+EGEEA|🏝️|Marea cu multe insule grecești
+CARAIBE|🏝️|Mare cu insule tropicale
+MORTA|🧂|Marea în care plutești ușor din cauza sării
+AZOV|🌊|Mare mică, lângă Marea Neagră
+VALURI|🌊|Se sparg pe plajă
+MAREE|🌊|Urcă și coboară apa pe țărm
+#1|Râuri și lacuri|🏞️
+NIL|🌊|Fluviul Egiptului
+AMAZON|🌴|Fluviu uriaș din America de Sud
+VOLGA|🌊|Cel mai lung râu din Europa
+SENA|🗼|Râul Parisului
+TAMISA|🌉|Râul Londrei
+RIN|🏞️|Fluviu european cu castele pe maluri
+OLT|🏞️|Râu care taie Carpații
+SIRET|🏞️|Râu din Moldova
+PRUT|🏞️|Râu la granița cu Republica Moldova
+BAIKAL|🏞️|Cel mai adânc lac din lume
+GARDA|🏞️|Lac din Italia
+TITICACA|🏞️|Lac la mare altitudine, în Anzi
+LEMAN|🏞️|Lacul de la Geneva
+#1|Munți celebri|🏔️
+EVEREST|🏔️|Cel mai înalt vârf din lume
+ALPI|🏔️|Munți cu Mont Blanc
+ANZI|⛰️|Lanț muntos lung din America de Sud
+URAL|⛰️|Munți între Europa și Asia
+ATLAS|⛰️|Munți din nordul Africii
+FUJI|🗻|Vulcan simbol al Japoniei
+ETNA|🌋|Vulcan din Sicilia
+VEZUVIU|🌋|Vulcan de lângă Pompei
+HIMALAYA|🏔️|Lanț cu cele mai înalte vârfuri
+TATRA|⛰️|Munți între Polonia și Slovacia
+PIRINEI|⛰️|Munți între Franța și Spania
+OLIMP|⚡|Muntele zeilor greci
+MONTBLANC|🏔️|Cel mai înalt vârf din Alpi
+#1|Deșerturi|🏜️
+SAHARA|🏜️|Cel mai mare deșert fierbinte
+GOBI|🏜️|Deșert din Mongolia
+NAMIB|🏜️|Deșert cu dune roșii, în Africa
+ATACAMA|🏜️|Cel mai uscat deșert, în Chile
+KALAHARI|🏜️|Deșert din sudul Africii
+DROMADER|🐪|Cămilă cu o singură cocoașă
+CACTUS|🌵|Plantă cu ghimpi, ține apă
+NISIP|🏖️|Din el sunt făcute dunele
+MIRAJ|🌅|Iluzie de apă în deșert
+SCORPION|🦂|Are venin în coadă
+OAZA|🌴|Loc cu apă și palmieri
+DUNA|🏜️|Deal de nisip mișcat de vânt
+BEDUIN|🐪|Nomad din deșertul arab
+#1|Minunile lumii|🗿
+PIRAMIDE|🔺|Morminte uriașe din Giza
+COLOSEUM|🏟️|Amfiteatru din Roma
+TAJMAHAL|🕌|Mausoleu alb din India
+PETRA|🏛️|Oraș sculptat în stâncă, în Iordania
+SFINX|🦁|Leu cu cap de om, în Egipt
+ACROPOLA|🏛️|Cetate pe deal, din Atena
+PARTENON|🏛️|Templu închinat Atenei
+FARAON|👑|Conducător al Egiptului antic
+MUMIE|🏺|Trup conservat în Egipt
+GIZA|🔺|Platou cu piramide, lângă Cairo
+TEMPLU|🏛️|Casă pentru zei
+#1|Obiective turistice|📸
+EIFFEL|🗼|Turnul de fier din Paris
+LOUVRE|🖼️|Muzeul cu Mona Lisa
+BIGBEN|🕰️|Ceasul mare din Londra
+LIBERTY|🗽|Statuia din New York
+SAGRADA|⛪|Biserica nesfârșită a lui Gaudí, din Barcelona
+ALHAMBRA|🏰|Palat maur din Granada
+KREMLIN|🏰|Fortăreața din Moscova
+OPERA|🎭|Clădire cu acoperiș ca pânzele, din Sydney
+PISA|🗼|Turn înclinat din Italia
+GONDOLA|🛶|Barcă din Veneția
+FONTANA|⛲|Trevi, din Roma
+BOSFOR|🌉|Strâmtoare ce desparte Europa de Asia
+#1|Europa|🇪🇺
+SUEDIA|🇸🇪|Țara mobilei IKEA
+FINLANDA|🎅|Țara lui Moș Crăciun și a saunelor
+POLONIA|🇵🇱|Țară cu capitala Varșovia
+AUSTRIA|🎻|Țara lui Mozart
+ELVETIA|🧀|Țara ceasurilor și a ciocolatei
+BELGIA|🍫|Țara waffle-lor
+OLANDA|🌷|Țara lalelelor și a morilor
+BULGARIA|🇧🇬|Vecina de la sud
+UNGARIA|🇭🇺|Vecina de la vest
+SERBIA|🇷🇸|Vecina de la sud-vest
+UCRAINA|🌻|Vecina de la nord
+CROATIA|🇭🇷|Țară cu coasta Adriatică
+#1|Asia|🌏
+NEPAL|🏔️|Țara cu Everestul
+THAILANDA|🐘|Țara zâmbetului
+VIETNAM|🍜|Țara supei pho
+COREEA|🇰🇷|Țara cu K-pop
+MONGOLIA|🐎|Țara lui Genghis Han
+TURCIA|🇹🇷|Țară între Europa și Asia
+KYOTO|⛩️|Oraș japonez cu temple
+SUSHI|🍣|Orez cu pește crud
+PANDA|🐼|Urs alb-negru din China
+BAMBUS|🎋|Hrana pandei
+IURTA|⛺|Locuința nomazilor mongoli
+SAMURAI|⚔️|Luptător japonez din vechime
+KIMONO|👘|Haină tradițională japoneză
+#1|Africa|🌍
+KENYA|🦁|Țara safari-urilor
+MAROC|🕌|Țară cu Marrakech
+NIGERIA|🌍|Cea mai populată țară africană
+SAFARI|🦓|Excursie pentru animale sălbatice
+SAVANA|🌾|Câmpie cu iarbă înaltă
+GNU|🐃|Antilopă care migrează în turme
+HIENA|🐕|Râde ciudat în savană
+RINOCER|🦏|Are corn pe nas
+TUNISIA|🌍|Țară cu ruinele Cartaginei
+ETIOPIA|☕|Locul de unde vine cafeaua
+BAOBAB|🌳|Copac uriaș din savană
+SENEGAL|🌍|Țară cu capitala Dakar
+#1|America|🌎
+PERU|🦙|Țara lui Machu Picchu
+CHILE|🇨🇱|Țara lungă și îngustă
+ARGENTINA|💃|Țara tangoului
+COLUMBIA|☕|Țara cafelei
+BOLIVIA|🇧🇴|Țară din Anzi
+TANGO|💃|Dans argentinian
+LAMA|🦙|Animal de munte din Anzi
+INCA|🏛️|Civilizație din Anzi
+AZTEC|🏛️|Civilizație din Mexic
+MAYA|🏛️|Civilizație cu piramide în junglă
+CANION|🏜️|Vale adâncă și lungă, ca cea din Arizona
+TEXAS|🤠|Stat american cu cowboy
+NIAGARA|🌊|Cascadă uriașă
+#1|Vacanțe exotice|🌴
+MALDIVE|🏝️|Arhipelag cu bungalouri pe apă
+ZANZIBAR|🌴|Insulă cu plaje albe
+MAURITIUS|🏝️|Insulă tropicală din Oceanul Indian
+BAHAMAS|🏖️|Arhipelag cu plaje turcoaz
+PLAJA|🏖️|Loc cu nisip și valuri
+PALMIER|🌴|Copac înalt de la tropice
+COCTAIL|🍹|Băutură cu umbreluță
+SNORKEL|🤿|Te ajută să privești recifurile
+SURF|🏄|Mergi pe valuri cu placa
+HAMAC|🏝️|Pat atârnat între doi palmieri
+CRUCIERA|🚢|Vacanță pe un vapor mare
+LAGUNA|🏝️|Apă calmă și turcoaz
+#1|Orașe romantice|💘
+VENETIA|🛶|Oraș cu canale și gondole
+FLORENTA|🏛️|Orașul Renașterii
+VERONA|💘|Orașul lui Romeo și Julieta
+SANTORINI|🌅|Insulă cu case albe și cupole albastre
+BRUGES|🦢|Oraș belgian cu canale
+PRAGA|🏰|Oraș cu o mie de turnuri
+VIENA|🎻|Oraș al valsului
+LISABONA|🚋|Oraș cu tramvaie galbene
+PARIS|🗼|Orașul iubirii
+TRANDAFIR|🌹|Floarea dragostei
+BALCON|🏠|Locul unde stă Julieta
+#2|Animale domestice|🐄
+CAPRA|🐐|Urcă pe stânci și dă lapte
+PORC|🐖|Face groh-groh
+GASCA|🦆|Pasăre mare care gâgâie
+CURCAN|🦃|Pasăre mare cu pene în evantai
+MAGAR|🐴|Animal încăpățânat cu urechi lungi
+BOU|🐂|Trage plugul
+MIEL|🐑|Puiul oii
+VITEL|🐄|Puiul vacii
+PUI|🐤|Mic și galben, iese din ou
+IEPURE|🐰|Are urechi lungi
+CAL|🐴|Se călărește
+OAIE|🐑|Dă lână
+COCOS|🐓|Cântă dimineața
+#2|Animale sălbatice|🦌
+LUP|🐺|Urlă la lună
+URS|🐻|Doarme iarna
+VULPE|🦊|Șireată, cu coadă stufoasă
+CERB|🦌|Are coarne ramificate
+MISTRET|🐗|Porc sălbatic cu colți
+RIS|🐈|Pisică sălbatică cu moțuri la urechi
+VEVERITA|🐿️|Adună nuci în copac
+BIZON|🦬|Bou sălbatic uriaș
+ZIMBRU|🦬|Cel mai mare mamifer din Europa
+CAPRIOARA|🦌|Cerb mic și grațios
+LEU|🦁|Regele junglei
+TIGRU|🐯|Pisică mare cu dungi
+#2|Pisici și rase de pisici|🐈
+PERSANA|🐱|Pisică cu blană lungă și bot turtit
+SIAMEZA|🐱|Pisică cu ochi albaștri
+SFINX|🐱|Pisică fără blană
+MAINECOON|🐱|Rasă uriașă cu blană deasă
+BENGAL|🐅|Pisică cu pete ca de leopard
+ANGORA|🐱|Pisică turcească cu blană albă
+BRITANICA|🐱|Pisică cu fața rotundă și păr des
+MIAU|😺|Cum strigă pisica
+LABA|🐾|O linge pisica ca să se spele
+PISOI|🐱|Pui de pisică
+GHEARA|🐾|Pisica o ascunde în lăbuță
+SOARECE|🐭|Prada pisicii
+TORCE|😻|Sunetul pisicii mulțumite
+#2|Câini și rase de câini|🐕
+LABRADOR|🐕|Câine blând, ghid pentru nevăzători
+HUSKY|🐺|Câine cu ochi albaștri, tras de sănii
+BEAGLE|🐕|Câine cu urechi lungi și nas bun
+BULDOG|🐶|Câine îndesat, cu fața turtită
+CHIHUAHUA|🐕|Cel mai mic câine din lume
+DALMATIAN|🐕|Câine alb cu pete negre
+CARPATIN|🐕|Ciobănesc de la munte
+MIORITIC|🐑|Ciobănesc care păzește oile
+PUDEL|🐩|Câine cu blană creață
+ZGARDA|🐕|O poartă câinele la gât
+LATRAT|🐕|Cum face câinele
+CATEL|🐶|Pui de câine
+BOXER|🐕|Câine puternic, cu botul scurt
+#2|Insecte|🐞
+FURNICA|🐜|Muncește în șir, mică și harnică
+GANDAC|🪲|Insectă cu aripi dure
+BUBURUZA|🐞|Roșie cu puncte negre
+TANTAR|🦟|Țiuie noaptea și mușcă
+MUSCA|🪰|Se așază pe zahăr
+GREIER|🦗|Cântă în iarbă seara
+LIBELULA|🦋|Are aripi subțiri, zboară lângă ape
+VIESPE|🐝|Seamănă cu albina, dar înțeapă
+MOLIE|🦋|Mănâncă hainele din dulap
+ALBINA|🐝|Face miere
+FLUTURE|🦋|Are aripi colorate
+STUP|🐝|Casa albinelor
+#2|Reptile|🦎
+CROCODIL|🐊|Plânge cu lacrimi false
+TESTOASA|🐢|Lentă, cu carapace
+SOPARLA|🦎|Își lasă coada dacă o prinzi
+IGUANA|🦎|Reptilă verde, cu creastă
+CAMELEON|🦎|Își schimbă culoarea
+COBRA|🐍|Își umflă gâtul
+PITON|🐍|Șarpe uriaș care strânge prada
+ALIGATOR|🐊|Seamănă cu crocodilul
+VIPERA|🐍|Șarpe veninos
+GECKO|🦎|Merge pe pereți
+KOMODO|🦎|Cea mai mare șopârlă din lume
+SOLZI|🐍|Acoperă pielea reptilelor
+SARPE|🐍|Șuieră și nu are picioare
+#2|Animale dispărute|🦣
+MAMUT|🦣|Elefant păros din Epoca Glaciară
+DODO|🐦|Pasăre dispărută din Mauritius
+TREX|🦖|Rege dintre dinozauri
+RAPTOR|🦖|Dinozaur mic și iute, cu gheare
+STEGOSAUR|🦕|Dinozaur cu plăci pe spate
+DIPLODOC|🦕|Dinozaur cu gâtul foarte lung
+FOSILA|🦴|Rămășiță veche, păstrată în piatră
+AMBRA|🟡|Rășină veche în care rămân insecte
+TRILOBIT|🦴|Animal marin vechi, cu corp în segmente
+MEGALODON|🦈|Rechin uriaș dispărut
+DINOZAUR|🦖|A dispărut acum milioane de ani
+GHETARI|🧊|Ghețuri din epoca glaciară
+#2|Flori|🌷
+TRANDAFIR|🌹|Floarea dragostei
+LALEA|🌷|Floare olandeză
+ZAMBILA|🌸|Floare de primăvară, cu parfum puternic
+GHIOCEL|🌼|Prima floare de primăvară
+LAVANDA|💜|Violetă și parfumată
+MARGARETA|🌼|Petale albe și inimă galbenă
+CRIN|🌸|Floare mare și regală
+ORHIDEE|🌸|Floare exotică și rafinată
+MACI|🌺|Floare roșie din lanurile de grâu
+BOBOC|🌱|Floarea înainte să se deschidă
+PETALA|🌸|Parte colorată a florii
+LOTUS|🪷|Floare sacră care crește în apă
+#2|Copaci și plante|🌳
+STEJAR|🌳|Copac cu ghinde, puternic
+FAG|🌳|Copac din păduri de munte
+BRAD|🎄|Copac de Crăciun
+MESTEACAN|🌳|Copac cu scoarță albă
+SALCIE|🌳|Copac cu ramuri lăsate spre apă
+PLOP|🌳|Copac înalt și subțire
+NUC|🌰|Copac cu miez bun la tort
+FERIGA|🌿|Plantă veche, cu frunze mari
+MUSCHI|🌿|Plantă moale pe pietre
+FRUNZA|🍃|Cade toamna
+RADACINA|🌱|Parte a plantei, ascunsă în pământ
+GHINDA|🌰|Fructul stejarului
+ALOE|🌵|Plantă cu gel pentru piele
+#2|Fenomene meteorologice|⛈️
+FULGER|⚡|Lumină puternică în furtună
+TUNET|🌩️|Zgomot după fulger
+FURTUNA|⛈️|Vânt puternic, ploaie și tunete
+CEATA|🌫️|Nor jos care te împiedică să vezi
+ZAPADA|❄️|Cade iarna în fulgi
+GRINDINA|🌨️|Bucăți de gheață din cer
+VANT|💨|Aer în mișcare
+TORNADA|🌪️|Vârtej uriaș care ridică totul
+GER|🥶|Frig mare iarna
+ROUA|💧|Picături pe iarbă dimineața
+POLEI|🧊|Gheață subțire pe drum
+CANICULA|🥵|Căldură foarte mare vara
+ECLIPSA|🌘|Luna acoperă Soarele
+AURORA|🌌|Lumini colorate pe cerul polar
+#2|Anotimpuri|🍂
+PRIMAVARA|🌷|Anotimpul florilor
+VARA|☀️|Anotimp cald, de vacanță
+TOAMNA|🍂|Cad frunzele
+IARNA|❄️|Anotimpul cu zăpadă
+MARTIE|🌱|Prima lună de primăvară
+IUNIE|☀️|Prima lună de vară
+AUGUST|🍉|Ultima lună a verii
+NOIEMBRIE|🍂|Ultima lună de toamnă
+DECEMBRIE|🎄|Prima lună de iarnă
+SOLSTITIU|🌞|Ziua cea mai lungă sau cea mai scurtă
+RECOLTA|🌾|Se strânge toamna
+PATINE|⛸️|Se poartă pe gheață
+SANIE|🛷|Te dai cu ea pe zăpadă
+#2|Parcuri naționale|🏞️
+SERENGETI|🦁|Parc din Tanzania cu migrația gnu-lor
+KRUGER|🐘|Parc mare din Africa de Sud
+YOSEMITE|🌲|Parc american cu sequoia
+ETOSHA|🦒|Parc din Namibia
+PADURE|🌲|Aici trăiesc urși și lupi
+CABANA|🏕️|Casă mică de munte
+POTECA|🥾|Drum îngust pentru drumeți
+CORT|⛺|Casa de pânză a campingului
+CAMPING|🏕️|Vacanță în aer liber
+BINOCLU|🔭|Cu el privești păsările de departe
+FAUNA|🦌|Toate animalele unui loc
+FLORA|🌿|Toate plantele unui loc
+CASCADA|💦|Apă care cade de pe stânci
+PESTERA|🕳️|Gaură mare în munte, cu stalactite
+#3|Bucătărie franceză|🥐
+CROISSANT|🥐|Corn de pâine cu unt, la micul dejun
+BAGHETA|🥖|Pâine lungă și subțire
+CREPE|🥞|Clătită subțire franțuzească
+FONDUE|🧀|Brânză topită în care înmoi pâine
+MACARON|🍪|Prăjitură colorată, cu cremă între două foi
+ECLER|🍫|Prăjitură lungă, cu cremă și glazură
+ESCARGOT|🐌|Melc gătit cu unt și usturoi
+QUICHE|🥧|Tartă sărată cu ouă și brânză
+CAMEMBERT|🧀|Brânză moale, cu mucegai alb pe coajă
+CIDRU|🍎|Băutură ușoară din mere
+TARTA|🥧|Prăjitură cu blat crocant și fructe
+BRIOSA|🧁|Prăjitură mică și pufoasă
+#3|Bucătărie asiatică|🍜
+SUSHI|🍣|Orez cu pește crud, din Japonia
+RAMEN|🍜|Supă japoneză cu tăiței
+WOK|🥘|Tigaie adâncă și rotundă
+TOFU|🍢|Brânză vegetală din soia
+CURRY|🍛|Sos cu mirodenii, din India
+SOIA|🌱|Din ea se face un sos negru și sărat
+TAITEI|🍜|Fire lungi de paste în supă
+DIMSUM|🥟|Găluște aburite din China
+KIMCHI|🥬|Varză picantă fermentată, din Coreea
+WASABI|🌿|Pastă verde, foarte iute
+NAAN|🫓|Pâine plată indiană
+PADTHAI|🍜|Tăiței prăjiți din Thailanda
+BETISOARE|🥢|Cu ele mănânci în Asia
+#3|Deserturi și prăjituri|🍰
+TORT|🎂|Se mănâncă la aniversare
+TIRAMISU|🍰|Desert italian cu cafea
+PAPANASI|🍩|Cu smântână și dulceață
+AMANDINA|🍰|Prăjitură românească cu glazură de ciocolată
+ISLER|🍪|Biscuit cu gem și glazură
+DOBOS|🍰|Tort cu foi subțiri și caramel
+BROWNIE|🍫|Prăjitură densă de ciocolată
+PAVLOVA|🍰|Bezea mare cu fructe și frișcă
+FRISCA|🥛|Spumă dulce, albă, bătută
+BEZEA|🍥|Albuș bătut și copt, crocant
+ECLER|🍫|Prăjitură lungă cu cremă
+COZONAC|🍞|Pufos, cu nucă
+#3|Dulciuri din copilărie|🍭
+ACADEA|🍭|Dulce, pe băț
+JELEURI|🍬|Bomboane moi, colorate
+BOMBOANA|🍬|Mică, dulce, în ambalaj
+GUMA|🫧|O mesteci și faci baloane
+HALVA|🍬|Dulce din semințe, de la bâlci
+RAHAT|🍬|Pătrățele moi, pudrate cu zahăr
+WAFER|🍫|Foi subțiri crocante cu cremă
+NUGA|🍫|Dulce cu miere și nuci
+PRALINE|🍫|Bomboane de ciocolată cu umplutură
+BISCUITI|🍪|Se mănâncă cu lapte la gustare
+ZAHAR|🍬|Alb și dulce, în ceai
+CIOCOLATA|🍫|Face lumea fericită
+INGHETATA|🍦|Se topește la soare
+#3|Fructe exotice|🥭
+MANGO|🥭|Fruct tropical, dulce și portocaliu
+PAPAYA|🍈|Fruct tropical cu semințe negre
+ANANAS|🍍|Fruct cu coroană de frunze
+KIWI|🥝|Verde înăuntru, cu pielea păroasă
+AVOCADO|🥑|Fruct verde cu sâmbure mare
+LITCHI|🍒|Fruct mic, cu coajă roșie și aspră
+GUAVA|🍈|Fruct tropical cu miez roz
+DURIAN|🍈|Fruct cu miros foarte puternic
+CARAMBOLA|⭐|Fruct în formă de stea
+FINIC|🌴|Fruct dulce de palmier
+CAKI|🍊|Fruct portocaliu și moale, de toamnă
+BANANA|🍌|Fruct galben
+#3|Condimente|🌶️
+PIPER|⚫|Mărunt și negru, te face să strănuți
+BUSUIOC|🌿|Verde, la pizza și la salată
+OREGANO|🌿|Plantă aromată pentru pizza
+TARHON|🌿|Se pune în borș
+MARAR|🌿|Verde, se pune în murături
+PATRUNJEL|🌿|Verde, în supă
+TIMIAN|🌿|Ierbă mică și aromată
+ZAFRAN|🟠|Cel mai scump condiment
+BOIA|🌶️|Praf roșu din ardei
+VANILIE|🍦|Aromă pentru deserturi
+MUSTAR|🌭|Galben și iute, la crenvurști
+GHIMBIR|🫚|Rădăcină iute din Asia
+CHIMEN|🌿|Semințe mici, în pâine
+#3|Băuturi|🥤
+CEAI|🍵|Se bea cald
+LAPTE|🥛|Alb, de la vacă
+CAFEA|☕|O bei dimineața ca să te trezești
+SUC|🧃|Băutură din fructe
+LIMONADA|🍋|Răcoritoare cu lămâie
+CACAO|☕|Băutură caldă de ciocolată
+SIROP|🥤|Dulce, se diluează cu apă
+COMPOT|🍑|Fructe fierte în apă dulce
+KEFIR|🥛|Lapte fermentat
+SMOOTHIE|🥤|Fructe mixate cu lapte sau iaurt
+APA|💧|Se bea
+SODA|🥤|Apă cu bule
+FRAPPE|☕|Cafea rece cu spumă
+#3|Mâncăruri de sărbători|🎄
+SARMALE|🥬|Carne în foi de varză
+COZONAC|🍞|Pufos, cu nucă
+DROB|🥩|Se face din organe, la Paște
+PASCA|🥧|Prăjitură cu brânză, de Paște
+OUA|🥚|Se vopsesc de Paște
+CALTABOS|🌭|Cârnat din carne, la Crăciun
+FRIPTURA|🍖|Carne la cuptor, pe masa festivă
+MIEL|🍖|Fel de Paște
+RACITURA|🍲|Jeleu de carne, la Crăciun
+SALATA|🥗|De boeuf, pe masa de sărbători
+TORT|🎂|Se taie la final
+PLACINTA|🥧|Cu brânză sau dovleac
+#3|Produse de panificație|🥖
+PAINE|🍞|Se coace în cuptor
+CORN|🥐|Pâine în formă de semilună
+COVRIG|🥨|Pâine răsucită, cu sare
+FRANZELA|🥖|Pâine lungă, albă, de la brutărie
+CHIFLA|🥖|Pâine mică și rotundă
+PRETZEL|🥨|Covrig sărat, de origine germană
+GRISINE|🥖|Bețișoare crocante de pâine
+BRUTAR|👨‍🍳|Meșterul care face pâinea
+CUPTOR|🔥|Aici se coace pâinea
+DROJDIE|🍞|O pui în aluat ca să crească
+FAINA|🌾|Se face din grâu măcinat
+ALUAT|🥣|Amestec de făină și apă
+FOCACCIA|🍞|Pâine italiană plată, cu ulei de măsline
+#4|Filme de animație|🎬
+PRINTESA|👸|Poartă coroană într-un castel
+DRAGON|🐲|Suflă foc pe nări
+UNICORN|🦄|Cal cu un corn magic
+SIRENA|🧜|Jumătate om, jumătate pește
+MONSTRU|👹|Mare, păros și înfricoșător
+ROBOT|🤖|Mașină care imită omul
+DINOZAUR|🦖|A dispărut acum milioane de ani
+PIRAT|🏴‍☠️|Are un papagal și o hartă a comorii
+COMOARA|💎|Se află la capătul hărții
+SUPEREROU|🦸|Zboară și salvează lumea
+ECRAN|🎞️|Unde se vede filmul
+DESEN|✏️|Fiecare cadru e unul
+VRAJITOR|🧙|Face farmece cu bagheta
+#4|Povești și basme|📚
+ZANA|🧚|Ființă bună din basme, cu bagheta magică
+ZMEU|🐲|Dușmanul lui Făt-Frumos
+BALAUR|🐉|Monstru cu mai multe capete
+PRINT|🤴|Se căsătorește cu prințesa
+FATFRUMOS|🤴|Eroul basmelor românești
+ILEANA|👸|Cosânzeana, frumoasa din basme
+GIGANT|🧍|Foarte mare, ca în povești
+PITICI|👥|Șapte la număr, în povestea cu Albă ca Zăpada
+PAPUC|👠|Pantof pierdut la bal
+MASCA|🎭|O pui ca să nu te recunoască
+VRAJITOR|🧙|Face farmece
+CASTEL|🏰|Locuința regilor
+DRAGON|🐲|Suflă foc
+#4|Televiziune și cinema|🍿
+POPCORN|🍿|Pocnește în tigaie și la cinema
+CINEMA|🎬|Sală cu ecran mare
+ECRAN|📺|Unde se vede imaginea
+ACTOR|🎭|Joacă un rol
+REGIZOR|🎬|Spune acțiune!
+CAMERA|🎥|Filmează scenele
+BILET|🎟️|Îl cumperi ca să intri la film
+TELEVIZOR|📺|Aparat cu ecran din sufragerie
+SERIAL|📺|Are multe episoade
+SCENARIU|📝|Textul pe care îl urmează actorii
+PREMIERA|🎉|Prima rulare a unui film
+OSCAR|🏆|Premiu faimos pentru film
+STIRI|📰|Se dau seara la televizor
+#5|Muzică clasică|🎼
+ORCHESTRA|🎻|Mulți muzicieni și un dirijor
+DIRIJOR|🎼|Conduce orchestra cu bagheta
+SIMFONIE|🎶|Lucrare lungă, pentru orchestră
+OPERA|🎭|Spectacol cântat, cu orchestră
+BALET|🩰|Dans pe vârfuri
+VIOARA|🎻|Se cântă cu arcușul
+VIOLONCEL|🎻|Vioară mare, cântată așezat pe scaun
+PIAN|🎹|Clape albe și negre
+HARPA|🎼|Are multe corzi ciupite
+FLAUT|🎶|Instrument de suflat, subțire
+CHOR|🎶|Mulți oameni cântă împreună
+SOPRANA|🎤|Voce înaltă de femeie
+BATUTA|🎼|O ține dirijorul în mână
+NOTA|🎵|Semn pe portativ
+PORTATIV|🎼|Cele cinci linii pe care se scriu notele
+#5|Compozitori celebri|🎹
+MOZART|🎹|Copil minune din Salzburg
+BEETHOVEN|🎼|A compus chiar și când nu mai auzea
+BACH|🎹|Maestrul fugii, din Germania
+CHOPIN|🎹|Pianist polonez
+VIVALDI|🎻|Autor al celor Patru anotimpuri
+HAYDN|🎼|Tatăl simfoniei, din Austria
+LISZT|🎹|Virtuoz al pianului, din Ungaria
+VERDI|🎭|Compozitor italian de operă
+STRAUSS|💃|Regele valsului
+ENESCU|🎻|Compozitor român, autor al Rapsodiilor
+BRAHMS|🎼|Compozitor german, autor al unui cântec de leagăn
+VALS|💃|Dans în trei timpi
+#5|Genuri muzicale|🎤
+POP|🎤|Muzică ușoară, la radio
+ROCK|🎸|Cu chitare electrice
+JAZZ|🎷|Improvizație, cu saxofon
+BLUES|🎶|Muzică tristă din sudul Americii
+FOLK|🪕|Cântec cu chitară și povești
+RAP|🎤|Versuri spuse în ritm
+DISCO|🪩|Muzică de dans, cu glob de oglinzi
+REGGAE|🌴|Muzică din Jamaica
+TANGO|💃|Dans argentinian
+SAMBA|💃|Dans brazilian de carnaval
+VALS|💃|Dans în trei timpi
+COLINDA|🎄|Se cântă de Crăciun
+HORA|💃|Dans în cerc
+#6|Egiptul antic|🔺
+FARAON|👑|Conducător al Egiptului antic
+PIRAMIDA|🔺|Mormânt uriaș, din piatră
+MUMIE|🏺|Trup conservat, înfășurat în fâșii
+SFINX|🦁|Leu cu cap de om
+NIL|🌊|Fluviul Egiptului
+PAPIRUS|📜|Hârtia egiptenilor
+CLEOPATRA|👸|Ultima regină a Egiptului
+SARCOFAG|⚰️|Sicriu din piatră sau aur
+SCARABEU|🪲|Gândac sacru
+ANUBIS|🐺|Zeu cu cap de șacal
+OBELISC|🗿|Stâlp înalt, cu vârf ascuțit
+MORMANT|🏺|Loc de odihnă al faraonilor
+GIZA|🔺|Platou cu piramide
+#6|Grecia antică|🏛️
+ATENA|🦉|Zeița înțelepciunii
+SPARTA|⚔️|Cetate de războinici
+OLIMPIA|🏅|Locul primelor întreceri
+MARATON|🏃|Alergare lungă, legată de lupta de lângă Atena
+AMFORA|🏺|Vas antic, cu două toarte
+ACROPOLA|🏛️|Cetate pe deal, din Atena
+PARTENON|🏛️|Templu închinat Atenei
+SOCRATE|🤔|Filosof care punea întrebări
+PLATON|📜|Elev al lui Socrate
+ARISTOTEL|📚|Profesorul lui Alexandru cel Mare
+HOMER|📖|Autor al Iliadei
+TEATRU|🎭|S-a născut în Grecia, cu tragedii
+AGORA|🏛️|Piața orașului grec
+#6|Imperiul Roman|🏛️
+CEZAR|👑|Dictator roman, cu coroană de lauri
+AUGUSTUS|🏛️|Primul împărat al Romei
+LEGIUNE|⚔️|Unitate mare din armata romană
+GLADIATOR|⚔️|Luptă în arenă
+ACVEDUCT|🌉|Duce apa pe arcade
+TOGA|👘|Haina romanilor
+TRAIAN|👑|Împărat care a cucerit Dacia
+DECEBAL|🛡️|Regele dacilor
+SENAT|🏛️|Adunarea bătrânilor de la Roma
+FORUM|🏛️|Piața centrală romană
+DRUM|🛣️|Toate duc la Roma
+LATINA|📜|Limba romanilor
+ROMA|🏛️|Orașul de pe șapte coline
+#6|Evul Mediu|🏰
+CASTEL|🏰|Locuința regilor
+CAVALER|🛡️|Luptător cu armură și cal
+TURNIR|🐎|Întrecere cu lănci între cavaleri
+SCUT|🛡️|Te apără de lovituri
+SABIE|⚔️|Armă lungă, din metal
+ARMURA|🛡️|Haina de fier a cavalerului
+SERB|🧑‍🌾|Țăran legat de pământul stăpânului
+MENESTREL|🎶|Cântăreț rătăcitor
+CRUCIADA|✝️|Expediție militară spre Locurile Sfinte
+CATAPULTA|🪨|Aruncă pietre peste ziduri
+PERGAMENT|📜|Piele subțire pe care se scria
+ARCAS|🏹|Apără cetatea cu arcul
+STEAG|🚩|Flutură pe turn
+#6|Mari exploratori|🧭
+COLUMB|⛵|A ajuns în America în 1492
+MAGELLAN|⛵|Expediția lui a ocolit Pământul
+BUSOLA|🧭|Arată nordul
+HARTA|🗺️|Arată drumul pe hârtie
+CARAVELA|⛵|Navă mică și rapidă din secolul XV
+NAVIGATOR|⚓|Conduce nava pe mare
+AMUNDSEN|🧊|A ajuns primul la Polul Sud
+HILLARY|🏔️|Primul pe Everest, alături de un șerpaș
+COOK|⛵|Căpitan britanic, a explorat Pacificul
+MARCOPOLO|🐫|Negustor venețian care a ajuns în China
+POL|🧊|Capătul Pământului, cu gheață
+EXPEDITIE|🎒|Călătorie organizată spre necunoscut
+#6|Inventatori|💡
+EDISON|💡|Inventator al becului practic
+TESLA|⚡|Savant al curentului alternativ
+BELL|☎️|A construit primul telefon
+GUTENBERG|📖|A inventat tiparul cu litere mobile
+WRIGHT|✈️|Frații care au zburat în 1903
+MARCONI|📻|Pionier al radioului
+VUIA|🛩️|Inventator român al unui aparat zburător
+COANDA|✈️|Constructor român de avion cu reacție
+PASTEUR|🧪|A inventat pasteurizarea
+NOBEL|🏆|A inventat dinamita și a creat premiile
+FLEMING|💊|A descoperit penicilina
+BEC|💡|Se aprinde când dai drumul la curent
+#6|Mitologie romană|⚡
+JUPITER|⚡|Regele zeilor la romani
+JUNONA|👑|Soția lui Jupiter
+MARS|⚔️|Zeul războiului
+VENUS|💘|Zeița iubirii la romani
+NEPTUN|🔱|Zeul mărilor
+MINERVA|🦉|Zeița înțelepciunii
+APOLO|☀️|Zeul luminii și al muzicii
+DIANA|🏹|Zeița vânătorii
+VESTA|🔥|Zeița căminului și a focului
+PLUTON|💀|Stăpânul lumii subpământene
+MERCUR|👟|Mesagerul zeilor
+CUPIDON|💘|Mic zeu cu arc și săgeți de dragoste
+ROMULUS|🐺|Întemeietorul Romei
+#7|Spațiul cosmic|🚀
+RACHETA|🚀|Pleacă în spațiu
+ASTRONAUT|👨‍🚀|Merge în spațiu, în costum special
+SATELIT|🛰️|Se învârte în jurul planetei
+TELESCOP|🔭|Cu el privești stelele
+GALAXIE|🌌|Milioane de stele
+COMETA|☄️|Are coadă luminoasă
+PLANETA|🪐|Se rotește în jurul unei stele
+ORBITA|🔄|Drumul în jurul altui corp
+NAVETA|🚀|Navă spațială reutilizabilă
+MARTIAN|👽|Locuitor imaginar de pe Marte
+METEORIT|☄️|Piatră căzută din cosmos
+STEA|⭐|Sclipește pe cer
+LUNA|🌙|Satelitul Pământului
+#7|Chimie și elemente|⚗️
+OXIGEN|💨|Gaz pe care îl respirăm
+HIDROGEN|🎈|Cel mai ușor element
+AUR|🥇|Metal galben, prețios
+ARGINT|🥈|Metal alb, strălucitor
+FIER|🧲|Metal care ruginește
+CUPRU|🪙|Metal roșiatic, din fire electrice
+CARBON|⚫|Elementul din diamant și cărbune
+HELIU|🎈|Gaz care ridică baloanele
+SODIU|🧂|Element din sarea de bucătărie
+ACID|🧪|Are gust acru, poate frige
+ATOM|⚛️|Cea mai mică parte a unui element
+MOLECULA|🧬|Atomi legați între ei
+NEON|💡|Gaz din tuburile luminoase
+#7|Fizică|🧲
+MAGNET|🧲|Atrage fierul
+ENERGIE|⚡|Face lucrurile să se miște
+VITEZA|🏎️|Cât de repede mergi
+LUMINA|💡|Ne ajută să vedem
+SUNET|🔊|Se aude prin aer
+CURENT|⚡|Trece prin fire electrice
+FORTA|💪|O aplici ca să miști ceva
+PRISMA|🌈|Descompune lumina în culori
+ECOU|🔊|Sunetul care se întoarce
+BATERIE|🔋|Stochează energie
+LENTILA|🔍|Mărește imaginea
+OGLINDA|🪞|Reflectă lumina
+PENDUL|⏱️|Se leagănă și măsoară timpul
+#7|Matematică|➗
+NUMAR|🔢|Îl numeri sau îl scrii cu cifre
+ZERO|0️⃣|Nu înseamnă nimic, dar contează
+PLUS|➕|Semnul adunării
+MINUS|➖|Semnul scăderii
+SUMA|➕|Rezultatul adunării
+TRIUNGHI|🔺|Figură cu trei laturi
+CERC|⭕|Rotund, fără colțuri
+PATRAT|🟦|Patru laturi egale
+DREAPTA|📏|Linie fără curbe
+UNGHI|📐|Se formează între două semidrepte
+PRODUS|✖️|Rezultatul înmulțirii
+FRACTIE|➗|Jumătate sau sfert
+CIFRA|7️⃣|Una din cele zece, de la 0 la 9
+#7|Invenții și tehnologii|💻
+CALCULATOR|💻|Face socoteli și joacă jocuri
+TELEFON|📱|Sună și are ecran
+ROBOT|🤖|Mașină care imită omul
+INTERNET|🌐|Rețeaua care leagă lumea
+LASER|🔴|Rază de lumină puternică
+DRONA|🛸|Aparat mic care zboară fără pilot
+BATERIE|🔋|Dă energie telefonului
+TABLETA|📱|Calculator subțire, cu ecran tactil
+ROUTER|📶|Aparat care dă wi-fi în casă
+MOUSE|🖱️|Se ține în mână, mișcă cursorul
+TASTATURA|⌨️|Are litere pe care le apeși
+SATELIT|🛰️|Orbitează în jurul Pământului
+ECRAN|🖥️|Aici apar imaginile
+#8|Obiecte din casă|🏠
+USA|🚪|O deschizi ca să intri
+FEREASTRA|🪟|Prin ea intră lumina
+PERDEA|🪟|Se trage seara la geam
+COVOR|🧶|Se întinde pe podea
+LAMPA|💡|Dă lumină seara
+OGLINDA|🪞|Te vezi în ea
+CEAS|⏰|Arată ora
+CHEIE|🔑|Deschide ușa
+PERNA|🛏️|Pe ea îți pui capul noaptea
+PLAPUMA|🛏️|Te acoperi cu ea iarna
+SCARA|🪜|Urci pe ea la etaj
+ACOPERIS|🏠|Protejează casa de ploaie
+PODEA|🏠|Pe ea calci în casă
+#8|Mobilier|🛋️
+CANAPEA|🛋️|Te așezi pe ea în sufragerie
+MASA|🍽️|La ea mănânci
+SCAUN|🪑|Te așezi pe el
+DULAP|🚪|Ține hainele
+PAT|🛏️|Aici dormi noaptea
+BIROU|🖥️|Aici îți faci temele
+RAFT|📚|Ține cărțile
+COMODA|🗄️|Are multe sertare
+FOTOLIU|🪑|Scaun moale, cu brațe
+BANCA|🪑|Loc de ședere în parc
+ETAJERA|📚|Raft cu mai multe niveluri
+SERTAR|🗄️|Se trage din comodă
+LAMPA|💡|Stă pe birou sau pe noptieră
+#8|Haine și accesorii|👕
+TRICOU|👕|Haină ușoară, de vară
+PANTALON|👖|Are două craci
+FUSTA|👗|Se poartă în loc de pantaloni
+ROCHIE|👗|Haină dintr-o bucată pentru fete
+PALTON|🧥|Haină lungă, pentru iarnă
+GECI|🧥|Te ține la căldură afară
+PALARIE|🎩|Se poartă pe cap
+ESARFA|🧣|Se poartă la gât iarna
+MANUSA|🧤|Ține mâna caldă
+CIORAP|🧦|Se pierde mereu din pereche
+PANTOF|👞|Se poartă în picioare
+CIZMA|🥾|Încălțăminte înaltă, bună pentru ploaie
+CUREA|👖|Ține pantalonii
+#8|Meserii și profesii|👷
+MEDIC|🩺|Îți face un control
+PROFESOR|👩‍🏫|Predă la școală
+POMPIER|🚒|Stinge incendii
+POLITIST|👮|Păstrează ordinea
+PILOT|✈️|Conduce avionul
+FRIZER|✂️|Taie părul
+BUCATAR|👨‍🍳|Gătește în restaurant
+PICTOR|🎨|Face tablouri
+SOFER|🚌|Conduce autobuzul
+ZIDAR|🧱|Construiește case
+TAMPLAR|🪚|Lucrează lemnul
+FERMIER|🚜|Muncește la fermă
+AVOCAT|⚖️|Apără oamenii în instanță
+#8|Mijloace de transport|🚌
+AUTOBUZ|🚌|Transport în comun, pe roți
+TRAMVAI|🚋|Merge pe șine, prin oraș
+METROU|🚇|Merge pe sub oraș
+TREN|🚆|Merge pe șine, între orașe
+AVION|✈️|Zboară pe cer
+VAPOR|🚢|Navighează pe apă
+BARCA|⛵|Plutește pe apă
+BICICLETA|🚲|Are două roți și pedale
+TROTINETA|🛴|Te împingi cu un picior
+CAMION|🚚|Cară marfă
+TAXI|🚕|Mașină cu șofer, plătită la drum
+SCUTER|🛵|Motocicletă mică și ușoară
+TELEFERIC|🚡|Urci cu el în munți, agățat de cablu
+#8|Școală și rechizite|🎒
+CAIET|📓|Scrii în el temele
+PENAR|✏️|Ține creioanele
+CREION|✏️|Scrii sau desenezi cu el
+RADIERA|🧽|Șterge greșelile din creion
+RIGLA|📏|Cu ea tragi linii drepte
+TEMA|📝|O faci acasă, după ore
+TABLA|🧑‍🏫|Aici scrie profesorul cu creta
+CRETA|✏️|Scrie pe tablă
+GHIOZDAN|🎒|Îl porți în spate, plin de cărți
+CLASA|🏫|Sala în care înveți
+PAUZA|⏰|Ieși din clasă când sună clopoțelul
+CARTE|📖|Se citește
+NOTA|💯|O primești la teste
+#8|Unelte|🔧
+CIOCAN|🔨|Bate cuie
+FERASTRAU|🪚|Taie lemnul
+SURUB|🔩|Se înfige în lemn, cu filet
+CLESTE|🔧|Strânge sau taie sârma
+CUI|🔨|Se bate cu ciocanul
+BURGHIU|🔩|Face găuri în perete
+LOPATA|⛏️|Sapi pământul cu ea
+TOPOR|🪓|Taie lemne pentru foc
+PENSULA|🖌️|Vopsești cu ea
+RULETA|📏|Măsoară lungimea
+MATURA|🧹|Cu ea mături podeaua
+CHEIE|🔧|Strânge piulițele
+SCARA|🪜|Te urci pe ea să ajungi sus
+#8|Grădinărit|🌱
+LOPATA|⛏️|Sapi pământul cu ea
+GREBLA|🧹|Strânge frunzele
+FURTUN|🚿|Prin el curge apa la stropit
+SEMINTE|🌱|Din ele crește planta
+RASAD|🌱|Plantă mică, gata de pus în grădină
+SERA|🏡|Casă de sticlă pentru plante
+GRADINA|🌻|Loc cu flori și legume
+COMPOST|🍂|Îngrășământ din resturi
+BURUIANA|🌿|Plantă nedorită
+LEGUME|🥕|Cresc în grădină
+RECOLTA|🌾|Se strânge toamna
+GARD|🚧|Împrejmuiește grădina
+GHIVECI|🪴|Aici crește floarea în casă
+#9|Familie|👨‍👩‍👧
+MAMA|👩|Te iubește și te alintă
+TATA|👨|Îți ține mâna când traversezi
+BUNIC|👴|Tatăl mamei sau al tatei
+BUNICA|👵|Face cele mai bune prăjituri
+FRATE|👦|Băiat din aceeași familie
+SORA|👧|Fată din aceeași familie
+VERISOR|🧒|Fiul unchiului sau al mătușii
+UNCHI|🧔|Fratele mamei sau al tatei
+MATUSA|👩|Sora mamei sau a tatei
+COPIL|🧒|Mic, jucăuș și curios
+NEPOT|👶|Fiul fratelui sau al surorii
+GEMENI|👯|Doi frați născuți odată
+FAMILIE|👪|Cei dragi din aceeași casă
+#9|Dragoste și romantism|❤️
+SARUT|😘|Mică atingere de drag
+IUBIRE|💞|Sentiment foarte puternic
+ROMEO|💘|Îndrăgostit din Verona
+JULIETA|💘|Îndrăgostită din Verona
+INEL|💍|Se oferă la logodnă
+LOGODNA|💍|Promisiunea unei nunți
+NUNTA|💒|Petrecere cu mireasă
+MIREASA|👰|Poartă rochie albă
+BUCHET|💐|Flori legate laolaltă
+CINA|🕯️|Masă romantică la lumânări
+INIMA|❤️|Bate în piept
+CUPIDON|💘|Mic zeu cu arc și săgeți de dragoste
+TRANDAFIR|🌹|Floarea dragostei
+#9|Emoții și sentimente|😊
+BUCURIE|😄|Când ești foarte vesel
+TRISTETE|😢|Când ești supărat
+FURIE|😠|Când ești foarte supărat
+FRICA|😨|O simți noaptea, în întuneric
+SURPRIZA|😲|Ceva neașteptat
+RUSINE|😳|Te face să roșești
+MANIE|😡|Te înfurii repede
+SPERANTA|🌅|Credința că va fi bine
+DOR|💭|Îți lipsește cineva scump
+ZAMBET|😊|Se vede pe față când ești vesel
+LACRIMA|😭|Picură din ochi când plângi
+RASET|😂|Ha-ha-ha!
+CURAJ|💪|Faci ceva, chiar dacă ți-e frică
+#9|Jocuri de societate|🎲
+ZAR|🎲|Îl arunci să vezi câte puncte ai
+SAH|♟️|Joc cu rege și regină, pe 64 de pătrățele
+DAMA|⚪|Joc cu piese rotunde, albe și negre
+REMI|🎴|Joc cu piese cu numere
+CARTI|🃏|Pachet cu 52 de bucăți
+DOMINO|🀄|Piese cu puncte, puse cap la cap
+PUZZLE|🧩|Bucăți care se potrivesc
+PIESA|♟️|O muți pe tablă
+ZARURI|🎲|Mai mulți cuburi cu puncte
+PION|♟️|Cea mai mică piesă de șah
+REGINA|♕|Cea mai puternică piesă de șah
+TURN|♜|Piesă de șah care merge drept
+PUNCTE|🔢|Se adună la sfârșit, să vezi cine câștigă
+#10|Fotbal|⚽
+MINGE|⚽|Se lovește cu piciorul
+POARTA|🥅|Aici se dă gol
+GOL|⚽|Mingea intră în plasă
+PORTAR|🧤|Păzește poarta
+ARBITRU|🟨|Dă cu fluierul și cartonașe
+CARTONAS|🟨|Galben sau roșu
+STADION|🏟️|Aici se joacă meciul
+ATACANT|⚽|Marchează goluri
+FUNDAS|⚽|Apără, jucătorul din spate
+ECHIPA|👕|Unsprezece jucători
+PENALTI|⚽|Lovitură de la unsprezece metri
+TRIBUNA|📣|Aici stau suporterii
+CORNER|🚩|Lovitură din colțul terenului
+#10|Sporturi de iarnă|⛷️
+SCHI|⛷️|Alunecare pe zăpadă cu două lungi
+PATINE|⛸️|Se poartă pe gheață
+SANIE|🛷|Te dai cu ea pe zăpadă
+HOCHEI|🏒|Cu crosă și puc, pe gheață
+BOB|🛷|Sanie rapidă pe pistă de gheață
+SNOWBOARD|🏂|Placă pe care cobori pe zăpadă
+CURLING|🥌|Pietre alunecate pe gheață
+PARTIE|⛷️|Pistă de schi
+TELESCAUN|🚡|Te urcă pe pârtie
+ZAPADA|❄️|Cade iarna în fulgi
+GHEATA|🧊|Pe ea patinezi
+BONETA|🧢|Te ține cald la cap, în frig
+#10|Jocuri Olimpice|🏅
+MEDALIE|🥇|Premiul câștigătorilor
+AUR|🥇|Medalia de la locul întâi
+ARGINT|🥈|Medalia de la locul doi
+BRONZ|🥉|Medalia de la locul trei
+FLACARA|🔥|Aprinsă la Olimpia, ajunge la stadion
+INELE|⭕|Cinci, colorate, pe steag
+PODIUM|🏆|Pe el urcă câștigătorii
+ATLET|🏃|Sportiv care aleargă sau sare
+RECORD|📈|Cea mai bună performanță
+STAFETA|🏃|Alergare cu baton, în echipă
+OLIMPIA|🏛️|Locul primelor întreceri
+CAMPION|🏆|Cel mai bun din întrecere
+IMN|🎶|Se cântă când se ridică steagul
+#10|Tenis|🎾
+RACHETA|🎾|O ții în mână ca să lovești mingea
+MINGE|🎾|Mică, galbenă și păroasă
+PLASA|🥅|Desparte cele două jumătăți ale terenului
+TEREN|🎾|Unde se joacă
+SERVICIU|🎾|Lovitura cu care începe punctul
+SET|🎾|Se compune din mai multe game-uri
+SMASH|💥|Lovitură puternică de deasupra capului
+REVER|🎾|Lovitură cu dosul palmei
+DUBLU|👯|Meci în doi contra doi
+ARGILA|🟫|Teren roșu, ca la Roland Garros
+IARBA|🌱|Teren verde, ca la Wimbledon
+TURNEU|🏆|Competiție cu mai multe meciuri
+ARBITRU|🟨|Spune scorul
+#12|Crăciun|🎄
+BRAD|🎄|Se împodobește în decembrie
+MOS|🎅|Vine cu daruri
+CADOU|🎁|Se găsește sub brad
+COLINDA|🎄|Se cântă de Crăciun
+SANIE|🛷|O trag renii
+RENI|🦌|Trag sania lui Moș Crăciun
+STELUTA|⭐|Ornament din vârful bradului
+GLOB|🔴|Bilă colorată de brad
+COZONAC|🍞|Pufos, cu nucă
+SARMALE|🥬|Carne în foi de varză
+ZAPADA|❄️|Cade în fulgi
+CORONITA|🎄|Împletitură verde, pe ușă
+BECURI|💡|Se aprind pe brad
+#12|Paște|🐣
+OUA|🥚|Se vopsesc roșu
+PASCA|🥧|Prăjitură cu brânză
+COZONAC|🍞|Pufos, cu stafide
+DROB|🥩|Fel tradițional
+MIEL|🐑|Puiul oii
+IEPURE|🐰|Aduce ouă colorate
+COSULET|🧺|Ține ouăle și pasca la biserică
+LUMANARE|🕯️|Se aprinde la Înviere
+BISERICA|⛪|Aici se merge la slujbă
+INVIERE|🌅|Cea mai mare sărbătoare creștină
+CIOCNIT|🥚|Se face cu ouă roșii
+VOPSEA|🎨|Colorează ouăle
+PUI|🐤|Mic și galben, iese din ou
+#12|Halloween|🎃
+DOVLEAC|🎃|Are față de Halloween
+FANTOMA|👻|Face buu! noaptea
+VRAJITOR|🧙|Face farmece cu bagheta
+MASCA|🎭|O pui ca să nu te recunoască
+LILIAC|🦇|Doarme cu capul în jos
+SCHELET|💀|Totalul oaselor
+PAIANJEN|🕷️|Țese pânza
+BOMBOANA|🍬|O primești dacă bați la ușă
+VAMPIR|🧛|Fuge de soare
+MUMIE|🧟|Înfășurată în fâșii
+COSTUM|🎭|Te îmbraci altfel, ca să sperii
+MATURA|🧹|Cu ea zboară vrăjitoarele
+PISICA|🐈|Neagră, sperie pe unii
+#12|Mărțișor și primăvară|🌷
+MARTISOR|🎀|Se oferă la 1 martie
+GHIOCEL|🌼|Prima floare de primăvară
+ZAMBILA|🌸|Floare cu parfum puternic
+LALEA|🌷|Floare olandeză
+PRIMAVARA|🌱|Anotimpul florilor
+MARTIE|📅|Prima lună de primăvară
+RANDUNICA|🐦|Pasăre care anunță primăvara
+CUC|🐦|Cântă în pădure primăvara
+ALBINA|🐝|Se trezește odată cu florile
+FLUTURE|🦋|Zboară din floare în floare
+SNUR|🧵|Fir răsucit, alb și roșu
+ROUA|💧|Picături pe iarbă dimineața
+SOARE|☀️|Ne încălzește tot mai mult
+#12|Ziua Îndrăgostiților|💘
+INIMA|❤️|Simbolul zilei
+CUPIDON|💘|Mic zeu cu arc și săgeți de dragoste
+TRANDAFIR|🌹|Se oferă celui drag
+SARUT|😘|Mică atingere de drag
+CIOCOLATA|🍫|Dulce, se oferă în cutie
+BUCHET|💐|Flori legate laolaltă
+CADOU|🎁|Surpriza de la cineva drag
+SCRISOARE|💌|Cuvinte de dragoste pe hârtie
+IUBIRE|💞|Sentiment foarte puternic
+CINA|🕯️|Masă romantică la lumânări
+BALON|🎈|Roșu, în formă de inimă
+DRAGOSTE|💖|Un alt cuvânt pentru iubire
+INEL|💍|Se oferă la logodnă
+#12|Vacanța de vară|🏖️
+PLAJA|🏖️|Loc cu nisip și valuri
+SOARE|☀️|Strălucește pe cer
+MARE|🌊|Albastră, sărată și cu valuri
+NISIP|🏖️|Faci castele din el
+UMBRELA|⛱️|Te ferește de soare pe plajă
+OCHELARI|🕶️|De soare
+CREMA|🧴|O pui ca să nu te arzi la soare
+SLAPI|🩴|Papuci de plajă
+INOT|🏊|Te miști în apă cu brațele
+INGHETATA|🍦|Se topește la soare
+VALIZA|🧳|Pui în ea hainele de drum
+HOTEL|🏨|Aici dormi în vacanță
+BARCA|⛵|Plutește pe apă
+#12|Înapoi la școală|🎒
+GHIOZDAN|🎒|Îl porți în spate, plin de cărți
+CAIET|📓|Scrii în el temele
+PENAR|✏️|Ține creioanele
+CREION|✏️|Scrii sau desenezi cu el
+RIGLA|📏|Cu ea tragi linii drepte
+CLASA|🏫|Sala în care înveți
+TABLA|🧑‍🏫|Aici scrie profesorul
+MANUAL|📘|Carte din care înveți la școală
+ORAR|🗓️|Arată ce materii ai în fiecare zi
+PAUZA|⏰|Ieși din clasă când sună clopoțelul
+NOTA|💯|O primești la teste
+COLEG|🧒|Stă cu tine în bancă
+BANCA|🪑|Aici stai la oră
+#12|Ziua României|🇷🇴
+TRICOLOR|🇷🇴|Steag cu albastru, galben și roșu
+UNIREA|📜|Eveniment din 1918
+ALBA|🏰|Orașul Marii Uniri
+ROMANIA|🇷🇴|Țara noastră
+DEFILARE|🎖️|Marș festiv cu militari
+STEAG|🚩|Flutură pe clădiri în ziua națională
+IMN|🎶|Se cântă în picioare
+ARTIFICII|🎆|Lumini colorate pe cerul nopții
+DECEMBRIE|📅|Luna zilei naționale
+MIHAI|👑|Rege român
+ISTORIE|📜|Povestea trecutului
+EROI|🎖️|Cei care au luptat pentru țară
+PARADA|🎖️|Festivitate cu militari pe stradă`;
+const TT=[];TH.split('\n').forEach(l=>{if(l[0]=='#'){const[c,n,e]=l.slice(1).split('|');TT.push({c:+c,n,e,w:[]})}else if(l.trim())TT[TT.length-1].w.push(l.split('|'))});
+const NT=10;
+//ENDTH
+const LR=[5,10,15,20,25,30,60],AV=['🙂','😎','🤓','🦊','🐼','🦁','🐯','🐸','🦉','🐙','🦄','🐲','🚀','🌟','🎨','⚽','🎸','👑','🧙','🤖'];
+const CR=[{k:7,lim:8,a:3,b:7},{k:9,lim:9,a:3,b:8},{k:11,lim:10,a:4,b:9}];
+const PZ=[['5 🪙',5,0],['10 🪙',10,0],['💡 ×2',2,1],['20 🪙',20,0],['15 🪙',15,0],['💡 ×3',3,1],['50 🪙',50,0],['25 🪙',25,0]],PC=['#e0457b','#2f7df6','#17a673','#d9730d','#9a4de0','#0f9bb0','#e0457b','#2f7df6'];
+BD.push(['ls7','🎁','Trofeu: 7 zile de recompense',s=>(s.ls||0)>=7],['wh','🎡','Primul tur la roată',s=>(s.wh||0)>=1],['ch','🏁','Campion de weekend',s=>(s.ch||0)>=1]);
+S=Object.assign({ls:{n:0,last:''},cs:{},av:'🙂',nm:'Jucător',fh:0,wd:'',clc:{}},S);
+BD.push(['th1','📚','Prima temă completă',s=>(s.th||0)>=1],['th5','🎓','Trofeu: 5 teme complete',s=>(s.th||0)>=5]);
+let ti=0,tj=0,cwk='',cr=0,an=0,spin=0,av2='';
+const wkid=()=>{let d=new Date();while(d.getDay()!=6)d=new Date(d-864e5);return dk(d)};
+function burst(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;const c=document.createElement('div');c.className='cf';
+ c.innerHTML=Array.from({length:40},()=>`<i style="left:${Math.random()*100}%;background:hsl(${Math.random()*360} 90% 60%);--dx:${(Math.random()-.5)*180}px;animation-delay:${Math.random()*.5}s"></i>`).join('');
+ document.body.appendChild(c);setTimeout(()=>c.remove(),3200)}
+function show(id){['today','home','lvl','game','lb','prof','rt','th','wl'].forEach(s=>$('#'+s).hidden=s!=id);$('#ov').hidden=true;
+ $('#nav').hidden=id=='game'||id=='rt'||id=='wl';const t=id=='lvl'?'th':id;
+ document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==t));window.scrollTo(0,0)}
+const _d=draw;draw=function(){const was=fin;_d();$('#hn').textContent='💡 Literă '+(S.fh?'gratis ('+S.fh+')':'5🪙');if(!was&&fin&&!$('#ov').hidden)burst()};
+function buy(c,f){if(S.coins<c){m='Îți trebuie '+c+' 🪙. Mai rezolvă o integramă!';return draw()}f();if(c)S.coins-=c;else S.fh--;hu++;S.st.hints++;m='';after()}
+function after(){if(md=='n'||md=='t'||md=='d'||md=='c'||md=='m'){const o={};for(const k in G)if(G[k].v&&!G[k].g)o[k]=G[k].v;S.p[g0]=o}save();draw()}
+function lvl(){home()}
+function onWin(){const sec=Math.round((Date.now()-t0)/1000),st=S.st,cl=!hu,sc=Math.max(100,1500-sec*3-hu*120);let fr=1;
+ if(md=='n'||md=='t'){fr=!S.done[g0];S.done[g0]=1;if(fr){rw=10+(md=='n'?Math.floor(g0/2):4)+(cl?5:0);if(md=='t'&&[...Array(NT).keys()].every(j=>S.done['T'+ti+'_'+j])&&!(S.tb||(S.tb={}))[ti]){S.tb[ti]=1;rw+=40;st.th=(st.th||0)+1;toast('📚 Temă completă! +40 🪙')}}}
+ else if(md=='d'){fr=!S.done[g0];S.done[g0]=1;if(fr){S.dsc[dk()]=sc;rw=20+(cl?10:0);st.daily++;st.dbest=Math.max(st.dbest,sc);submit(sc,sec)}}
+ else if(md=='f'){fr=tl>0;if(fr){rw=15+Math.floor(tl/4);st.fl++}}
+ else if(md=='u'){fr=!S.done[g0];S.done[g0]=1;if(fr){rw=10;st.dp++;dsub(sec)}}
+ else if(md=='m'){fr=!S.done[g0];S.done[g0]=1;if(fr){rw=60+(cl?20:0);st.mega=(st.mega||0)+1}}
+ else if(md=='c'){fr=!S.done[g0];S.done[g0]=1;if(fr){rw=15;S.cs[cwk]=S.cs[cwk]||{};S.cs[cwk][cr]=sc;if(Object.keys(S.cs[cwk]).length==3)st.ch=(st.ch||0)+1;csub()}}
+ if(fr){S.coins+=rw;st.solved++;if(cl)st.clean++;st.best=st.best?Math.min(st.best,sec):sec;
+  if(st.last!=dk()){st.streak=st.last==yd()?st.streak+1:1;st.last=dk()}}
+ chk()}
+const _w=winHTML;winHTML=function(){let h=_w();const I=(i,x)=>`<button class="card w1" id="${i}">${x}</button>`,b='<button class="card w0" id="mn">';
+ if(md=='t'&&tj+1<NT)h=h.replace(b,I('nxt','Următoarea integramă')+b);
+ if(md=='c')h=h.replace(b,(cr<2?I('nxc','Runda următoare'):I('lbb','Vezi clasamentul'))+b);return h};
+async function submit(sc,sec){if(!db||!uid)return;try{await db.doc('scores/'+dk()+'_'+uid).set({d:dk(),u:uid,s:sc,t:sec,h:hu,a:S.av,n:S.nm})}catch(e){}}
+async function csub(){if(!db||!uid)return;const s=Object.values(S.cs[cwk]).reduce((a,b)=>a+b,0);try{await db.doc('champ/'+cwk+'_'+uid).set({w:cwk,u:uid,s,a:S.av,n:S.nm})}catch(e){}}
+async function claim(){if(!db||!uid)return;const dow=new Date().getDay();
+ const tk=async(col,key,val,pr,tx)=>{if(S.cl[col+val])return;const q=await db.collection(col).where(key,'==',val).get(),r=q.docs.map(x=>x.data()).sort((a,b)=>b.s-a.s).slice(0,3),i=r.findIndex(v=>v.u==uid);
+  S.cl[col+val]=1;if(i>=0){S.coins+=pr[i];S.st.top++;toast(['🥇','🥈','🥉'][i]+' '+tx+' locul '+(i+1)+'! +'+pr[i]+' 🪙')}};
+ try{await tk('scores','d',yd(),[50,30,20],'Ieri, pe');if(dow>0&&dow<6)await tk('champ','w',wkid(),[100,60,40],'Campionat de weekend, pe');chk()}catch(e){}}
+async function lbv(){show('lb');const T=['Azi','Ieri','7 zile','Weekend'];$('#lbt').innerHTML=T.map((x,i)=>`<button data-i="${i}" class="${i==lt?'on':''}">${x}</button>`).join('');coins();
+ $('#dh').innerHTML=S.dl.slice(-3).map(c=>`<button data-c="${c}">Duel ${c}</button>`).join('');
+ const el=$('#lbl');if(!db){el.innerHTML='<p class="wm">Clasamentul și duelurile funcționează doar când ești conectat la contul Claude.</p>';return}
+ el.innerHTML='<p class="wm">Se încarcă…</p>';
+ try{const a={},av={};let q;
+  if(lt==3){q=await db.collection('champ').where('w','==',wkid()).get();q.docs.forEach(x=>{const v=x.data();a[v.u]=v.s;av[v.u]=[v.a,v.n]})}
+  else{const f=lt==2?dk(new Date(Date.now()-6*864e5)):lt==1?yd():dk(),to=lt==1?yd():dk();
+   q=await db.collection('scores').where('d','>=',f).where('d','<=',to).get();q.docs.forEach(x=>{const v=x.data();a[v.u]=(a[v.u]||0)+v.s;av[v.u]=[v.a,v.n]})}
+  const r=Object.entries(a).sort((p,q)=>q[1]-p[1]).slice(0,30),ps=usr?await usr.profiles(r.map(x=>x[0])):{};
+  el.innerHTML=r.length?r.map(([u,s],i)=>`<li class="${u==uid?'me':''}"><b>${['🥇','🥈','🥉'][i]||i+1}</b><span>${(av[u]&&av[u][0])||'🙂'} ${(av[u]&&av[u][1])||(ps[u]&&ps[u].name)||'Jucător'}</span><em>${s}</em></li>`).join(''):'<p class="wm">Încă nu e nimeni în clasament. Primii 3 câștigă puncte!</p>'}
+ catch(e){el.innerHTML='<p class="wm">Nu am putut încărca clasamentul.</p>'}}
+function today(){const t=dk(),tw=TW[new Date().getDay()],dn=S.done['D'+t],l=S.ls,we=[0,6].includes(new Date().getDay()),cs=S.cs[wkid()]||{},nc=[0,1,2].findIndex(r=>!cs[r]),
+ c=(i,cl,ic,b,s,pg)=>`<button class="card ${cl}" id="${i}"><span class="ic">${ic}</span><span class="tx"><b>${b}</b><small>${s}</small></span><span class="pg">${pg}</span></button>`,
+ dc=l.last==t?(l.n-1)%7+1:l.last==yd()?l.n%7:0,nn=l.last==yd()?l.n+1:1;
+ $('#dt').textContent=strk()?'🔥 Serie de '+strk()+(strk()==1?' zi':' zile'):'Începe o serie azi';
+ $('#td').innerHTML=c('bd','hero2','📅','Integrama zilei',new Date().toLocaleDateString('ro-RO',{weekday:'long',day:'numeric',month:'long'})+'<br>'+tw[0]+' · '+tw[1],dn?'✓ '+S.dsc[t]:'Joacă')
+ +c('bm','w4','🔎','Vânătoarea de cuvinte','Găsește 16 cuvinte ascunse · o dată pe zi',S.done['M'+t]?'✓':S.wp&&S.wp[t]&&S.wp[t].f.length?S.wp[t].f.length+'/16':'Joacă')
+ +`<div class="du"><b>🎁 Recompensa zilnică</b><div class="lr">${LR.map((r,i)=>`<i class="${i<dc?'ok':''}">${i<dc?'✓':r}</i>`).join('')}</div>`+(l.last==t?`<p class="wm">Revino mâine pentru +${LR[l.n%7]} 🪙</p>`:`<div class="row"><button id="lcl">Revendică +${LR[(nn-1)%7]} 🪙</button></div>`)+'</div>'
+ +c('bw','w2','🎡','Roata norocului',S.wd==t?'Un tur costă 10 🪙':'Un tur gratuit azi','Rotește')
+ +c('bc','w4','🏁','Campionat de weekend',we?(nc<0?'Toate cele 3 runde sunt gata':'Runda '+(nc+1)+' din 3 · total '+Object.values(cs).reduce((a,b)=>a+b,0)):'Se joacă sâmbătă și duminică, 3 runde',we?(nc<0?'✓':'Joacă'):'🔒')
+ +c('bs','w0','🔢','Sudoku zilnic','O grilă nouă în fiecare zi',S.done['SD'+t]?'✓':S.sp['SD'+t]?'În curs':'Joacă')+c('bt','w1','📚','Tema zilei',TT[hash(dk())%TT.length].e+' '+TT[hash(dk())%TT.length].n,'Joacă')+c('bf','w3','⚡','Integrama fulger',FT+' de secunde, 5 cuvinte','Joacă')+c('br','w5','⭕','Cercul literelor','Litere amestecate într-un cerc','Joacă')+c('bu','w1','⚔️','Duel cu prietenii','Aceeași integramă, cine e mai bun?','');
+ show('today');coins();claim()}
+function home(){let tot=0,h='';
+ WD.forEach(([ic,nm],w)=>{const lk=!open(w*NP);h+=`<div class="wb w${w}${lk?' lk':''}"><span>${lk?'🔒':ic}</span><b>${nm}</b></div><div class="mp">`;
+  for(let i=0;i<NP;i++){const g=w*NP+i,dn=S.done[g],cu=open(g)&&!dn;if(dn)tot++;
+   h+=`<button class="nd w${w}${open(g)?'':' lk'}${cu?' cu':''}" data-g="${g}" style="margin-left:${50+32*Math.sin(g*1.1)}%">${dn?'⭐':open(g)?i+1:'🔒'}</button>`}
+  h+='</div>'});
+ $('#mapc').innerHTML=h;const p=Math.round(tot*100/TOT);$('#tp').textContent='Ai terminat '+tot+' din '+TOT+' integrame · '+p+'%';$('#tb').style.width=p+'%';coins();show('home')}
+function th(){let h='';CT.forEach((c,ci)=>{const l=TT.filter(t=>t.c==ci);if(!l.length)return;h+=`<details${ci==0?' open':''}><summary>${c} · ${l.length}</summary>`+l.map(t=>{const i=TT.indexOf(t),dn=[...Array(NT).keys()].filter(j=>S.done['T'+i+'_'+j]).length;
+ return `<button class="card w${ci%6}" data-t="${i}"><span class="ic">${t.e}</span><span class="tx"><b>${t.n}</b><small>${t.w.length} cuvinte · ${NT} integrame</small><span class="bar"><i style="width:${dn*100/NT}%"></i></span></span><span class="pg">${dn}/${NT}</span></button>`}).join('')+'</details>'});
+ $('#thl').innerHTML=h;coins();show('th')}
+function thm(i){const t=TT[i];ti=i;$('#lt').textContent=t.e+' '+t.n;$('#wm').textContent='';
+ $('#tl').innerHTML=[...Array(NT).keys()].map(j=>`<button class="tile w${t.c%6}" data-t="${i}" data-j="${j}">${j+1}<small>${S.done['T'+i+'_'+j]?'✓':''}</small></button>`).join('');coins();show('lvl')}
+function startT(i,j){const t=TT[i];ti=i;tj=j;start(0,{m:'t',id:'T'+i+'_'+j,D:{k:Math.min(Math.floor(t.w.length*.7),5+Math.floor(j*.4)),lim:9,a:3,b:9,pool:t.w,blur:j>=7},seed:hash(t.n)+j*131,t:t.e+' '+t.n+' · '+(j+1)})}
+function startC(r){cwk=wkid();cr=r;start(0,{m:'c',id:'C'+cwk+'_'+r,D:CR[r],seed:hash('C'+cwk+r),t:'🏁 Campionat · runda '+(r+1)+'/3'})}
+function lclaim(){const t=dk(),l=S.ls;if(l.last==t)return;l.n=l.last==yd()?l.n+1:1;l.last=t;const r=LR[(l.n-1)%7];S.coins+=r;S.st.ls=Math.max(S.st.ls||0,l.n);toast('🎁 Ziua '+l.n+' · +'+r+' 🪙');burst();chk();today()}
+function wheel(){show('wl');coins();$('#wh').style.background='conic-gradient('+PC.map((c,i)=>c+' '+i*45+'deg '+(i+1)*45+'deg').join(',')+')';
+ $('#wh').innerHTML=PZ.map((p,i)=>`<span style="transform:translate(-50%,-50%) rotate(${i*45+22.5}deg) translateY(-100px)">${p[0]}</span>`).join('');
+ $('#sp').textContent=S.wd==dk()?'Rotește pentru 10 🪙':'Rotește gratis';$('#wr').textContent=S.fh?'Ai '+S.fh+' indicii gratuite 💡':''}
+const _p=prof;prof=function(){_p();const s=S.st,lv=Math.floor(s.solved/3)+1,tt=['Începător','Pasionat','Expert','Maestru','Legendă'][Math.min(4,Math.floor(lv/4))];
+ $('#pf').insertAdjacentHTML('afterbegin',`<div class="pr"><button id="ea" class="av">${S.av}</button><div><b>${S.nm}</b><small>Nivel ${lv} · ${tt}</small><span class="bar"><i style="width:${s.solved%3*33.3}%"></i></span></div></div>`)};
+function editAv(){av2=S.av;ovs(`<div><h1>Profilul tău</h1><div class="avs">${AV.map(a=>`<button data-a="${a}" class="${a==av2?'on':''}">${a}</button>`).join('')}</div><input id="nm" maxlength="14" value="${S.nm}" style="text-transform:none"><button class="card w1" id="sv">Salvează</button></div>`)}
+$('#sp').onclick=()=>{if(spin)return;const fr=S.wd!=dk();if(!fr&&S.coins<10){$('#wr').textContent='Îți trebuie 10 🪙';return}
+ spin=1;if(!fr)S.coins-=10;else S.wd=dk();const r=Math.random()*8|0;an+=1440+((360-(r*45+22.5))-an%360+360)%360;$('#wh').style.transform='rotate('+an+'deg)';coins();
+ setTimeout(()=>{spin=0;const p=PZ[r];if(p[2])S.fh+=p[1];else S.coins+=p[1];S.st.wh=(S.st.wh||0)+1;$('#wr').textContent='Ai câștigat: '+p[0]+'!';$('#sp').textContent='Rotește pentru 10 🪙';burst();chk()},4200)};
+$('#wb2').onclick=today;
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(b)({today,home,th,lb:lbv,prof})[b.dataset.t]()};
+$('#td').onclick=e=>{const b=e.target.closest('button');if(!b)return;const i=b.id;
+ if(i=='bd')start(0,{m:'d',id:'D'+dk(),D:TW[new Date().getDay()][2],seed:hash(dk()),t:'📅 Integrama zilei'});
+ else if(i=='bf')startF();else if(i=='br')rtStart();else if(i=='lcl')lclaim();else if(i=='bw')wheel();
+ else if(i=='bc'){if(![0,6].includes(new Date().getDay()))toast('Campionatul se joacă sâmbăta și duminica 🏁');else{const nc=[0,1,2].findIndex(r=>!(S.cs[wkid()]||{})[r]);nc<0?lbv():startC(nc)}}
+ else if(i=='bm')startM();else if(i=='bs')sdDaily();else if(i=='bt'){const q=hash(dk())%TT.length,r=[...Array(NT).keys()].find(j=>!S.done['T'+q+'_'+j]);startT(q,r==null?0:r)}
+ else lbv()};
+$('#mapc').onclick=e=>{const b=e.target.closest('.nd');if(!b)return;const g=+b.dataset.g;open(g)?start(g):toast('Termină integrama dinainte ca s-o deblochezi 🔒')};
+$('#thl').onclick=e=>{const b=e.target.closest('button');if(b)thm(+b.dataset.t)};
+$('#tl').onclick=e=>{const b=e.target.closest('button');if(b&&b.dataset.j!=null)startT(+b.dataset.t,+b.dataset.j)};
+$('#lb2').onclick=th;
+$('#bk').onclick=()=>md=='n'?home():md=='t'?thm(ti):today();
+$('#pf').onclick=e=>{if(e.target.closest('#ea'))editAv()};
+$('#hn').onclick=()=>{const x=G[sel];if(x.g||x.v==x.ans){m='Litera e deja corectă 😉';return draw()}buy(S.fh>0?0:5,()=>{x.v=x.ans;x.bad=0})};
+const oo=$('#ov').onclick;$('#ov').onclick=e=>{const t=e.target,a=t.closest('[data-a]');
+ if(a){av2=a.dataset.a;document.querySelectorAll('.avs button').forEach(x=>x.classList.toggle('on',x==a));return}
+ if(t.id=='sv'){S.av=av2;S.nm=$('#nm').value.trim()||'Jucător';save();$('#ov').hidden=true;prof();return}
+ if(t.id=='mn'&&md=='t')return thm(ti);
+ if(t.id=='mn'&&md=='n')return home();
+ if(t.id=='nxt')return startT(ti,tj+1);
+ if(t.id=='nxc')return startC(cr+1);
+ oo(e)};
+//SD
+function sdFill(rnd){const g=Array(81).fill(0),r=Array(9).fill(0),c=Array(9).fill(0),b=Array(9).fill(0);
+ const sh=a=>{for(let i=a.length-1;i>0;i--){const j=rnd()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+ (function go(){let bi=-1,bm=0,bc=10;
+  for(let i=0;i<81;i++)if(!g[i]){const R=i/9|0,C=i%9,B=(R/3|0)*3+(C/3|0),m=~(r[R]|c[C]|b[B])&0x3FE;let k=0,x=m;while(x){k++;x&=x-1}if(k<bc){bc=k;bi=i;bm=m;if(k<=1)break}}
+  if(bi<0)return true;if(!bc)return false;
+  const R=bi/9|0,C=bi%9,B=(R/3|0)*3+(C/3|0);
+  for(const d of sh([1,2,3,4,5,6,7,8,9])){const m=1<<d;if(bm&m){g[bi]=d;r[R]|=m;c[C]|=m;b[B]|=m;if(go())return true;g[bi]=0;r[R]&=~m;c[C]&=~m;b[B]&=~m}}
+  return false})();return g}
+function sdCount(g,lim){const r=Array(9).fill(0),c=Array(9).fill(0),b=Array(9).fill(0);
+ for(let i=0;i<81;i++)if(g[i]){const m=1<<g[i],R=i/9|0,C=i%9;r[R]|=m;c[C]|=m;b[(R/3|0)*3+(C/3|0)]|=m}
+ let n=0;
+ (function go(){if(n>=lim)return;let bi=-1,bm=0,bc=10;
+  for(let i=0;i<81;i++)if(!g[i]){const R=i/9|0,C=i%9,B=(R/3|0)*3+(C/3|0),m=~(r[R]|c[C]|b[B])&0x3FE;let k=0,x=m;while(x){k++;x&=x-1}if(k<bc){bc=k;bi=i;bm=m;if(k<=1)break}}
+  if(bi<0){n++;return}if(!bc)return;
+  const R=bi/9|0,C=bi%9,B=(R/3|0)*3+(C/3|0);
+  for(let d=1;d<=9;d++){const m=1<<d;if(bm&m){g[bi]=d;r[R]|=m;c[C]|=m;b[B]|=m;go();g[bi]=0;r[R]&=~m;c[C]&=~m;b[B]&=~m;if(n>=lim)return}}})();return n}
+function sdGen(seed,given){const rnd=rng(seed),sol=sdFill(rnd),p=sol.slice(),o=[...Array(81).keys()];
+ for(let i=80;i>0;i--){const j=rnd()*(i+1)|0;[o[i],o[j]]=[o[j],o[i]]}
+ let n=81;for(const i of o){if(n<=given)break;const t=p[i];p[i]=0;if(sdCount(p.slice(),2)==1)n--;else p[i]=t}
+ return{g:p,sol}}
+//ENDSD
+//MG
+function megaPool(){const m=new Map();[...POOL,...TT.flatMap(t=>t.w)].forEach(w=>{if(w[0].length>=3&&w[0].length<=9&&!m.has(w[0]))m.set(w[0],w)});return[...m.values()]}
+//ENDMG
+//SH
+const SH=(()=>{const N=27,m=13;
+ const heart=(r,c)=>{const x=(c-m)/m*1.25,y=1.3-2.3*r/(N-1);return Math.pow(x*x+y*y-1,3)-x*x*y*y*y<=0};
+ return[
+ {n:'clepsidră',N,f:(r,c)=>Math.abs(c-m)<=Math.max(4,Math.abs(r-m)*.9),sr:m,sc:m},
+ {n:'cerc',N,f:(r,c)=>(r-m)**2+(c-m)**2<=(m+.5)**2,sr:m,sc:m},
+ {n:'romb',N,f:(r,c)=>Math.abs(r-m)+Math.abs(c-m)<=m+1,sr:m,sc:m},
+ {n:'inimă',N,f:heart,sr:8,sc:m},
+ {n:'cruce',N,f:(r,c)=>Math.abs(r-m)<=5||Math.abs(c-m)<=5,sr:m,sc:m},
+ {n:'triunghi',N,f:(r,c)=>Math.abs(c-m)<=r/2+1,sr:m,sc:m},
+ {n:'ramă',N,f:(r,c)=>r<7||c<7||r>=N-7||c>=N-7,sr:3,sc:m}].map(s=>({...s,f:(r,c)=>r>=0&&c>=0&&r<N&&c<N&&s.f(r,c)}))})();
+//ENDSH
+S.sp=S.sp||{};
+BD.push(['sd1','🔢','Primul sudoku',s=>(s.sd||0)>=1],['sd10','🧮','Trofeu: 10 sudoku',s=>(s.sd||0)>=10],['sdd','📅','Sudoku zilnic rezolvat',s=>(s.sdd||0)>=1],['mg','✨','Vânătoarea de cuvinte rezolvată',s=>(s.mega||0)>=1],['mg5','🏆','Trofeu: 5 vânători de cuvinte',s=>(s.mega||0)>=5]);
+let SD=null,SLv=0,SDC={};
+const SL=[['Bronz','🥉',46,'w3',10],['Argint','🥈',36,'w1',20],['Aur','🥇',28,'w2',30]],SN=20;
+function show(id){['today','home','lvl','game','lb','prof','rt','th','wl','sd','sdg'].forEach(s=>$('#'+s).hidden=s!=id);$('#ov').hidden=true;
+ $('#nav').hidden=['game','rt','wl','sdg'].includes(id);const t=id=='lvl'?'th':id;
+ document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.t==t));window.scrollTo(0,0)}
+function fit(){const w=$('#gw');if(!w.clientWidth||!C)return;
+ if(md=='m'){w.classList.add('big');$('#g').style.setProperty('--s','30px');
+  const e=$('#g b.sel');if(e){const r=e.getBoundingClientRect(),q=w.getBoundingClientRect();
+   if(r.left<q.left||r.right>q.right||r.top<q.top||r.bottom>q.bottom){w.scrollLeft+=r.left-q.left-(q.width-r.width)/2;w.scrollTop+=r.top-q.top-(q.height-r.height)/2}}return}
+ w.classList.remove('big');
+ const s=Math.floor(Math.min(46,(w.clientWidth-3*(C-1))/C,(w.clientHeight-3*(R-1))/R));
+ $('#g').style.setProperty('--s',Math.max(s,16)+'px')}
+const sdOpen=(l,i)=>i==0||!!S.done['S'+l+'_'+(i-1)];
+function sdMenu(){show('sd');coins();const t=dk(),dn=S.done['SD'+t];
+ $('#sdl').innerHTML=`<button class="card hero2" id="sdd"><span class="ic">📅</span><span class="tx"><b>Sudoku zilnic</b><small>O grilă nouă în fiecare zi</small></span><span class="pg">${dn?'✓':S.sp['SD'+t]?'În curs':'Joacă'}</span></button>`
+ +SL.map(([n,ic,g,cl],l)=>{const d=[...Array(SN).keys()].filter(i=>S.done['S'+l+'_'+i]).length;
+  return `<button class="card ${cl}" data-l="${l}"><span class="ic">${ic}</span><span class="tx"><b>${n}</b><small>${g} cifre date · ${SN} jocuri</small><span class="bar"><i style="width:${d*100/SN}%"></i></span></span><span class="pg">${d}/${SN}</span></button>`}).join('');
+ sdTiles()}
+function sdTiles(){const l=SLv;$('#sdt').innerHTML='<h2>'+SL[l][1]+' '+SL[l][0]+'</h2><div class="tg">'+[...Array(SN).keys()].map(i=>{const o=sdOpen(l,i),k='S'+l+'_'+i;
+ return `<button class="tile ${SL[l][3]}${o?'':' lk'}" data-i="${i}">${o?i+1:'🔒'}<small>${S.done[k]?'✓':S.sp[k]?'…':''}</small></button>`}).join('')+'</div>'}
+function sdStart(key,seed,given,title,rwd,l,i){const p=SDC[key]=SDC[key]||sdGen(seed,given),sv=S.sp[key];
+ SD={key,title,rwd,l,i,g:p.g,sol:p.sol,c:sv?sv.c.slice():Array(81).fill(0),n:sv?sv.n.slice():Array(81).fill(0),sel:-1,nt:0,hu:sv?sv.h:0,er:sv?(sv.e||0):0,over:0,t0:Date.now()-(sv?(sv.t||0)*1000:0),fin:0,m:''};
+ show('sdg');sdDraw()}
+function sdDaily(){const k=dk();sdStart('SD'+k,hash('SD'+k),[30,46,42,38,36,34,32][new Date().getDay()],'📅 Sudoku zilnic',25,null,null)}
+function sdLevel(l,i){sdStart('S'+l+'_'+i,hash('S'+l+'_'+i),SL[l][2],SL[l][1]+' '+SL[l][0]+' · '+(i+1),SL[l][4],l,i)}
+function sdDraw(){const q=SD,sel=q.sel,sr=sel>=0?sel/9|0:-1,sc=sel>=0?sel%9:-1,sv=sel>=0?(q.g[sel]||q.c[sel]):0;let h='',wn=1;
+ for(let i=0;i<81;i++){const R=i/9|0,C=i%9,gv=q.g[i],v=gv||q.c[i];if(v!=q.sol[i])wn=0;let k=gv?'gv':'';
+  if(sel>=0&&i!=sel&&(R==sr||C==sc||(Math.floor(R/3)==Math.floor(sr/3)&&Math.floor(C/3)==Math.floor(sc/3))))k+=' hl';
+  if(v&&sv&&v==sv&&i!=sel)k+=' sm';
+  if(i==sel)k+=' sel';
+  if(!gv&&v&&v!=q.sol[i])k+=' er';
+  if(C%3==2&&C<8)k+=' rb';if(R%3==2&&R<8)k+=' bb';
+  let t=v||'';if(!v&&q.n[i])t='<i class="nt">'+[1,2,3,4,5,6,7,8,9].map(d=>'<s>'+(q.n[i]&(1<<d)?d:'')+'</s>').join('')+'</i>';
+  h+=`<b data-i="${i}" class="${k}">${t}</b>`}
+ $('#sb').innerHTML=h;$('#stt').textContent=q.title;
+ sdPad();$('#sm').textContent='❤️'.repeat(Math.max(0,3-q.er))+'🖤'.repeat(Math.min(3,q.er))+(q.m?'  '+q.m:'');
+ $('#snt').textContent='✏️ Notițe: '+(q.nt?'da':'nu');$('#snt').classList.toggle('on',!!q.nt);
+ $('#shn').textContent='💡 Număr '+(S.fh?'gratis ('+S.fh+')':'5🪙');coins();
+ if(wn&&!q.fin){q.fin=1;sdWin()}}
+function sdWin(){const q=SD,k=q.key,fr=!S.done[k],st=S.st,sec=Math.round((Date.now()-q.t0)/1000);let rw=0;
+ if(fr){S.done[k]=1;rw=q.rwd+(q.hu?0:5);S.coins+=rw;st.sd=(st.sd||0)+1;if(q.l==null)st.sdd=(st.sdd||0)+1;
+  if(st.last!=dk()){st.streak=st.last==yd()?st.streak+1:1;st.last=dk()}}
+ delete S.sp[k];chk();burst();
+ const nx=q.l!=null&&q.i+1<SN;
+ ovs('<div><div class="big">🎉</div><h1>Excelent!</h1><p>'+(fr?'+'+rw+' 🪙'+(q.hu?'':' (bonus: fără ajutor!)'):'Ai rezolvat-o din nou!')+' · '+Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')+'</p>'+(nx?'<button class="card w1" id="sdnx">Următorul sudoku</button>':'')+'<button class="card w0" id="sdm">Înapoi</button></div>')}
+function sdDone(d){const q=SD;let n=0;for(let i=0;i<81;i++){const v=q.g[i]||q.c[i];if(v==d&&v==q.sol[i])n++}return n>=9}
+function sdPad(){document.querySelectorAll('#spd button').forEach(b=>{const d=+b.dataset.d;b.classList.toggle('dn',!!d&&sdDone(d))})}
+function sdOver(){const q=SD;q.over=1;ovs('<div><div class="big">💔</div><h1>Ai făcut 3 greșeli</h1><p>Nu-i nimic, mai încearcă o dată!</p><button class="card w1" id="sdre">Reîncepe</button><button class="card w0" id="sdm">Înapoi</button></div>')}
+function sdSave(){S.sp[SD.key]={e:SD.er,c:SD.c,n:SD.n,h:SD.hu,t:Math.round((Date.now()-SD.t0)/1000)};save()}
+function sdNum(d){const q=SD,i=q.sel;if(q.over)return;if(i<0||q.g[i]){q.m='Alege o celulă goală';return sdDraw()}q.m='';
+ if(sdDone(d)){q.m='Cifra '+d+' e completă peste tot ✅';return sdDraw()}
+ if(q.nt){if(!q.c[i])q.n[i]^=1<<d}
+ else{q.c[i]=d;q.n[i]=0;const R=i/9|0,C=i%9;
+  for(let j=0;j<81;j++){const r=j/9|0,c=j%9;if(r==R||c==C||(Math.floor(r/3)==Math.floor(R/3)&&Math.floor(c/3)==Math.floor(C/3)))q.n[j]&=~(1<<d)}
+  if(d!=q.sol[i]){q.er++;q.m='Numărul nu se potrivește ('+Math.min(q.er,3)+'/3 greșeli)'}}
+ sdSave();sdDraw();if(q.er>=3&&!q.over)sdOver()}
+function sdErase(){const q=SD,i=q.sel;if(i<0||q.g[i])return;q.c[i]=0;q.n[i]=0;q.m='';sdSave();sdDraw()}
+function sdHint(){const q=SD,i=q.sel;if(i<0||q.g[i]||q.c[i]==q.sol[i]){q.m='Alege o celulă goală sau greșită';return sdDraw()}
+ if(S.fh>0)S.fh--;else if(S.coins>=5)S.coins-=5;else{q.m='Îți trebuie 5 🪙';return sdDraw()}
+ q.c[i]=q.sol[i];q.n[i]=0;q.hu++;S.st.hints++;q.m='';sdSave();sdDraw()}
+$('#spd').innerHTML=[1,2,3,4,5,6,7,8,9].map(d=>`<button data-d="${d}">${d}</button>`).join('')+'<button data-d="0">⌫</button>';
+$('#spd').onclick=e=>{const b=e.target.closest('button');if(!b)return;+b.dataset.d?sdNum(+b.dataset.d):sdErase()};
+$('#sb').onclick=e=>{const b=e.target.closest('b');if(b){SD.sel=+b.dataset.i;SD.m='';sdDraw()}};
+$('#snt').onclick=()=>{SD.nt=SD.nt?0:1;sdDraw()};
+$('#shn').onclick=sdHint;
+$('#srs').onclick=()=>{SD.c=Array(81).fill(0);SD.n=Array(81).fill(0);SD.m='Tabla a fost resetată';sdSave();sdDraw()};
+$('#sbk').onclick=sdMenu;
+$('#sdl').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id=='sdd')return sdDaily();SLv=+b.dataset.l;sdTiles();$('#sdt').scrollIntoView({behavior:'smooth'})};
+$('#sdt').onclick=e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;if(!sdOpen(SLv,i))return toast('Rezolvă sudoku-ul de dinainte 🔒');sdLevel(SLv,i)};
+setInterval(()=>{if($('#sdg').hidden||!SD||SD.fin)return;const s=Math.round((Date.now()-SD.t0)/1000);$('#stm').textContent='⏱ '+Math.floor(s/60)+':'+String(s%60).padStart(2,'0')},1000);
+document.addEventListener('keydown',e=>{if($('#sdg').hidden||!SD||e.metaKey||e.ctrlKey)return;if(/^[1-9]$/.test(e.key))sdNum(+e.key);else if(e.key=='Backspace'||e.key=='Delete')sdErase()});
+const oo3=$('#ov').onclick;$('#ov').onclick=e=>{const t=e.target;
+ if(t.id=='sdnx'){$('#ov').hidden=true;return sdLevel(SD.l,SD.i+1)}
+ if(t.id=='sdm'){$('#ov').hidden=true;return sdMenu()}
+ if(t.id=='sdre'){$('#ov').hidden=true;SD.c=Array(81).fill(0);SD.n=Array(81).fill(0);SD.er=0;SD.over=0;SD.m='Ai 3 vieți noi ❤️';sdSave();return sdDraw()}
+ oo3(e)};
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(b)({today,home,th,lb:lbv,prof,sd:sdMenu})[b.dataset.t]()};
+const _p2=prof;prof=function(){_p2();const s=S.st,e=document.querySelector('#pf .stats');
+ if(e)e.insertAdjacentHTML('beforeend',[['🔢',s.sd||0,'Sudoku rezolvate'],['✨',s.mega||0,'Vânători de cuvinte']].map(([i,v,l])=>`<div><span>${i}</span><b>${v}</b><small>${l}</small></div>`).join(''))};
+//WS
+const WN=12,WD4=[[0,1],[1,0],[1,1],[-1,1]],WD8=[[0,1],[1,0],[1,1],[-1,1],[0,-1],[-1,0],[-1,-1],[1,-1]];
+function wsGen(seed,pool,dirs,K){const rnd=rng(seed),g=Array(WN*WN).fill(''),out=[],chosen=[];
+ const cand=pool.filter(p=>p[0].length>=3&&p[0].length<=8).map(p=>[rnd(),p]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
+ const rv=s=>[...s].reverse().join('');
+ for(const p of cand){if(chosen.length>=K+12)break;const w=p[0];if(chosen.some(q=>q[0].includes(w)||w.includes(q[0])||q[0].includes(rv(w))||rv(w).includes(q[0])))continue;chosen.push(p)}
+ chosen.sort((a,b)=>b[0].length-a[0].length);
+ for(const p of chosen){if(out.length>=K)break;const w=p[0],L=w.length;let done=null;
+  for(let t=0;t<150&&!done;t++){const d=dirs[rnd()*dirs.length|0],r0=rnd()*WN|0,c0=rnd()*WN|0,r1=r0+d[0]*(L-1),c1=c0+d[1]*(L-1);
+   if(r1<0||r1>=WN||c1<0||c1>=WN)continue;let ok=1;
+   for(let i=0;i<L;i++){const x=g[(r0+d[0]*i)*WN+c0+d[1]*i];if(x&&x!=w[i]){ok=0;break}}
+   if(!ok)continue;for(let i=0;i<L;i++)g[(r0+d[0]*i)*WN+c0+d[1]*i]=w[i];done=[r0,c0,d[0],d[1]]}
+  if(done)out.push({w,e:p[1],t:p[2],r:done[0],c:done[1],dr:done[2],dc:done[3]})}
+ const lt=out.flatMap(o=>[...o.w]);for(let i=0;i<g.length;i++)if(!g[i])g[i]=lt[rnd()*lt.length|0];
+ return{g,words:out}}
+//ENDWS
+//WSUI
+S.wp=S.wp||{};let WS=null;
+function wsClue(o,f){return f?'<b>'+o.w+'</b>':o.e+' '+o.t+' <small>('+o.w.length+')</small>'}
+function startM(){const k=dk(),we=[0,6].includes(new Date().getDay()),g=wsGen(hash('M'+k),megaPool(),we?WD8:WD4,16),sv=S.wp[k]||{f:[],h:0,s:0};
+ WS={k,g:g.g,w:g.words,f:new Set(sv.f),h:sv.h||0,s0:sv.s||0,t0:Date.now(),a:-1,hl:-1,fin:!!S.done['M'+k],msg:'Atinge prima și ultima literă a unui cuvânt'};
+ show('ws');wsDraw()}
+function wsSave(){const q=WS;S.wp[q.k]={f:[...q.f],h:q.h,s:wsSec()};save()}
+function wsSec(){return WS.s0+Math.round((Date.now()-WS.t0)/1000)}
+function wsDraw(){const q=WS,col=new Map();q.f.forEach(i=>{const o=q.w[i];for(let j=0;j<o.w.length;j++)col.set((o.r+o.dr*j)*WN+o.c+o.dc*j,'hsl('+(i*47%360)+' 75% 72%)')});
+ let h='';for(let i=0;i<WN*WN;i++){const c=col.get(i);h+='<b data-i="'+i+'"'+(c?' style="background:'+c+'"':'')+(i==q.a?' class="sel"':i==q.hl?' class="ht"':'')+'>'+q.g[i]+'</b>'}
+ $('#wg').innerHTML=h;
+ $('#wc').innerHTML=q.w.map((o,i)=>'<i class="'+(q.f.has(i)?'ok':'')+'">'+wsClue(o,q.f.has(i))+'</i>').join('');
+ $('#wm').textContent=q.msg;$('#wtt').textContent='🔎 '+q.f.size+'/'+q.w.length;$('#whn').textContent='💡 Indiciu '+(S.fh?'gratis ('+S.fh+')':'5🪙');coins()}
+function wsPick(i){const q=WS;if(q.fin)return;q.hl=-1;
+ if(q.a<0){q.a=i;q.msg='Acum atinge ultima literă';return wsDraw()}
+ if(q.a==i){q.a=-1;q.msg='';return wsDraw()}
+ const r0=q.a/WN|0,c0=q.a%WN,r1=i/WN|0,c1=i%WN,dr=r1-r0,dc=c1-c0;q.a=-1;
+ if(!(dr==0||dc==0||Math.abs(dr)==Math.abs(dc))){q.msg='Cuvintele stau pe linie dreaptă ↔ ↕ ⤢';return wsDraw()}
+ const n=Math.max(Math.abs(dr),Math.abs(dc))+1,sr=Math.sign(dr),sc=Math.sign(dc);let s='';for(let j=0;j<n;j++)s+=q.g[(r0+sr*j)*WN+c0+sc*j];
+ const rv=[...s].reverse().join(''),k=q.w.findIndex((o,x)=>!q.f.has(x)&&(o.w==s||o.w==rv));
+ if(k<0){q.msg='Nu e un cuvânt căutat — încearcă din nou';return wsDraw()}
+ q.f.add(k);q.msg='✅ '+q.w[k].w+'!';wsSave();wsDraw();if(q.f.size==q.w.length)wsWin()}
+function wsHint(){const q=WS;if(q.fin)return;const k=q.w.findIndex((o,x)=>!q.f.has(x));if(k<0)return;
+ if(S.fh>0)S.fh--;else if(S.coins>=5)S.coins-=5;else{q.msg='Nu ai destule monede 🪙';return wsDraw()}
+ q.h++;const o=q.w[k];q.hl=o.r*WN+o.c;q.msg='💡 '+o.e+' '+o.t+' începe aici';wsSave();wsDraw();const e=$('#wg b.ht');if(e)e.scrollIntoView({block:'center',inline:'center'})}
+function wsWin(){const q=WS,sec=wsSec(),fr=!S.done['M'+q.k];q.fin=1;let rw=0;
+ if(fr){rw=60+(q.h?0:20);S.coins+=rw;S.done['M'+q.k]=1;S.st.mega=(S.st.mega||0)+1}wsSave();chk();coins();
+ ovs('<div><div class="big">🎉</div><h1>Le-ai găsit pe toate!</h1><p>'+(fr?'+'+rw+' 🪙'+(q.h?'':' (bonus: fără indicii!)'):'Ai rezolvat-o din nou!')+' · '+Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')+'</p><button class="card w0" id="wsm">Înapoi</button></div>');burst()}
+$('#wg').onclick=e=>{const b=e.target.closest('b');if(b)wsPick(+b.dataset.i)};
+$('#whn').onclick=wsHint;$('#wbk').onclick=()=>{if(WS&&!WS.fin)wsSave();today()};
+setInterval(()=>{if($('#ws').hidden||!WS||WS.fin)return;const s=wsSec();$('#wtm').textContent='⏱ '+Math.floor(s/60)+':'+String(s%60).padStart(2,'0')},1000);
+const oo4=$('#ov').onclick;$('#ov').onclick=e=>{if(e.target.id=='wsm'){$('#ov').hidden=true;return today()}oo4(e)};
+const _sh=show;show=function(id){_sh(id);$('#ws').hidden=id!='ws';if(id=='ws')$('#nav').hidden=true};
+//ENDWSUI
+
+today();
+</script>
+<script>
+/* === STATISTICI (GoatCounter, gratuit) ===
+   Pune între ghilimele codul tău de la goatcounter.com, ex: 'brainzone' */
+const GC_CODE='brainzone';
+(function(){if(!GC_CODE)return;
+ const sc=document.createElement('script');sc.async=true;sc.dataset.goatcounter='https://'+GC_CODE+'.goatcounter.com/count';sc.src='https://gc.zgo.at/count.js';document.head.appendChild(sc);
+ const ev=(p,t)=>{let n=0;(function w(){if(window.goatcounter&&goatcounter.count){goatcounter.count({path:p,title:t,event:true})}else if(n++<50)setTimeout(w,200)})()};
+ addEventListener('appinstalled',()=>ev('instalare','Instalare aplicație'));
+ if(navigator.standalone||matchMedia('(display-mode:standalone)').matches){let k='bzOpen',d=new Date().toDateString();try{if(localStorage.getItem(k)!=d){localStorage.setItem(k,d);ev('deschis-din-ecran','Deschis de pe ecranul principal')}}catch(e){ev('deschis-din-ecran','Deschis de pe ecranul principal')}}
+})();
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body></html>
